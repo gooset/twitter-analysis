@@ -1,7 +1,9 @@
 import styles from './LoadingModal.module.scss';
 
+// LoadingModal component
 const LoadingModal = props => {
     return (
+        // Render a div element with the appropriate class names
         <div className={`${styles.glass} ${styles.loadingModal}`}>
             <div className={styles.loadingBox}>
                 <div className={styles.content}>
@@ -13,4 +15,6 @@ const LoadingModal = props => {
     )
 }
 
-export default LoadingModal
+// Export the LoadingModal component as the default export
+export default LoadingModal;
+

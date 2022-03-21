@@ -1,43 +1,65 @@
-import React, {useEffect, useState} from 'react'
-import {useDispatch, useSelector} from 'react-redux';
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
-import {Searchbar, Error} from '../../components';
-import {tweetsModalActions} from '../../store/slices/tweetsModal';
-import tweetsTimeline, {timelineActions} from '../../store/slices/tweetsTimeline';
-import {searchbarActions} from '../../store/slices/searchbar';
-import { BsDisplay } from 'react-icons/bs';
- 
+import { Searchbar, TweetBox, Error } from '../../components';
+import { tweetsActions } from '../../store/slices/tweetBox';
+import { searchbarActions } from '../../store/slices/searchbar';
 
+const AnalyseTweetPage = () => {
+  const dispatch = useDispatch();
+  const { displayTweetBox } = useSelector((state) => state.tweetBox);
 
-const AnalyseTweets = () => {
-    
-    const dispatch = useDispatch();
-    const [error, setError] = useState(null);
-    
-    const handleSubmit = async () => {
-        const result = await fetch(`/api/tweets`);
-      
-        const results = await result.json();
-        const tweets = results.data;
+  const [tweetText, setTweetText] = useState('');
+  const [tweetAuthor, setTweetAuthor] = useState({});
+  const [tweetCreatedAt, setTweetCreatedAt] = useState('');
+  const [error, setError] = useState(null);
 
-        dispatch(searchbarActions.setIsLoading(false));
-        dispatch(tweetsModalActions.isOpen(true));
+  const handleSubmit = async (statusId) => {
+    dispatch(searchbarActions.setIsLoading(true));
 
-        dispatch(timelineActions.setTweets({tweets}))
+    try {
+      const fetchedTweet = await (await fetch('/api/tweetos')).json();
 
-        dispatch(timelineActions.setShowUserProfile(true));
+      if (!fetchedTweet || fetchedTweet === undefined) {
+        throw new Error("API not available. Please try later !");
+      }
+
+      setTweetText(fetchedTweet.tweet_content);
+      setTweetCreatedAt(fetchedTweet.created_at);
+      setTweetAuthor(fetchedTweet.username);
+
+      dispatch(tweetsActions.displayTweetBox(true));
+    } catch (error) {
+      setError(error.message);
+    } finally {
+      dispatch(searchbarActions.setIsLoading(false));
     }
+  };
 
-    return (
-        <div id="analyseTweets" className={`flex res-f-height section-padding`}>
-          <Searchbar 
-            description="Pour tester appuyez sur submit" 
-            placeholder="" 
-            handleSubmit={handleSubmit}
-          >
-            {error && <Error message={error} marginTop/>}
-          </Searchbar>
-        </div>
-    )
-}
-export default AnalyseTweets 
+  return (
+    <div id="analyseTweet" className="flex res-f-height section-padding">
+      <Searchbar
+        handleSubmit={handleSubmit}
+        searchByStatus
+        description="Analyze the selected tweets"
+        placeholder="Enter the URL of a tweet (e.g., https://twitter.com/user/status/151458909249539)"
+      >
+        {error && <Error message={error} />}
+        {displayTweetBox && (
+          <TweetBox
+            showProfile
+            closeTweetBox
+            tweetText={tweetText}
+            createdAt={tweetCreatedAt}
+            username={tweetAuthor.username}
+            userImage={tweetAuthor.profile_img}
+            tweetId={tweetAuthor.id}
+          />
+        )}
+      </Searchbar>
+    </div>
+  );
+};
+
+export default AnalyseTweetPage;
+

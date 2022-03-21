@@ -12,7 +12,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     width: 100%;
 
     &Img {
@@ -70,6 +69,8 @@
 
       &Name {
         margin-top: 1.2rem;
+        font-size: 1.6rem;
+        font-weight: 500;
       }
 
       & .topicName {
@@ -79,3 +80,4 @@
     }
   }
 }
+

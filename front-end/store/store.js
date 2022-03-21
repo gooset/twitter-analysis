@@ -6,12 +6,13 @@ import tweetsModalReducer from './slices/tweetsModal';
 import tweetsTimelineReducer from './slices/tweetsTimeline';
 
 const store = configureStore({
-    reducer: { 
-        tweetBox: tweetBoxReducer,
-        searchbar: searchbarReducer,
-        tweetsModal: tweetsModalReducer,
-        tweetsTimeline: tweetsTimelineReducer
-    }
-})
+  reducer: {
+    tweetBox: tweetBoxReducer,
+    searchbar: searchbarReducer,
+    tweetsModal: tweetsModalReducer,
+    tweetsTimeline: tweetsTimelineReducer,
+  },
+});
 
 export default store;
+

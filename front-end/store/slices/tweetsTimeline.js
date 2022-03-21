@@ -5,7 +5,7 @@ const initialState = {
   tweets: [],
 };
 
-const tweetsTimeline = createSlice({
+const tweetsTimelineSlice = createSlice({
   name: "tweetsTimeline",
   initialState,
   reducers: {
@@ -22,5 +22,6 @@ const tweetsTimeline = createSlice({
   },
 });
 
-export const timelineActions = tweetsTimeline.actions;
-export default tweetsTimeline.reducer;
+export const { setTweets, setShowUserProfile, clearTweets } = tweetsTimelineSlice.actions;
+export default tweetsTimelineSlice.reducer;
+

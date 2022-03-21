@@ -1,18 +1,19 @@
-import {createSlice} from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    isOpen: false,
-}
+  isOpen: false,
+};
 
-const tweetsModal = createSlice({
-    name: 'tweetsModal',
-    initialState,
-    reducers: {
-        isOpen(state, action){
-            state.isOpen = action.payload;
-        }
+const tweetsModalSlice = createSlice({
+  name: 'tweetsModal',
+  initialState,
+  reducers: {
+    setModalOpen(state, action) {
+      state.isOpen = action.payload;
     },
-})
+  },
+});
 
-export const tweetsModalActions = tweetsModal.actions;
-export default tweetsModal.reducer;
+export const { setModalOpen } = tweetsModalSlice.actions;
+export default tweetsModalSlice.reducer;
+

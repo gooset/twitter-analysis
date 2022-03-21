@@ -11,39 +11,46 @@ const QuerySearch = () => {
   const dispatch = useDispatch();
   const [error, setError] = useState(null);
 
-  const handleSubmitQuery = async (query) => {
-    dispatch(timelineActions.clearTweets());
-    const term = query;
-    const res = await axios.get(`http://localhost:8000/search/?term=${query}`);
-    const results = await res.data;
-    const tweets = results.data;
+  const fetchTweetsByQuery = async (query) => {
+    try {
+      const res = await axios.get(`http://localhost:8000/search/?term=${query}`);
+      const results = res.data;
+      const tweets = results.data;
 
+      if (!tweets || tweets.length === 0) {
+        setError('No results found for the given keyword.');
+        return;
+      }
 
-    if (!tweets || tweets.length === 0) {
+      dispatch(timelineActions.setTweets({ tweets }));
+      dispatch(tweetsModalActions.isOpen(true));
+    } catch (error) {
+      setError('An error occurred while fetching tweets for the keyword.');
+    } finally {
       dispatch(searchbarActions.setIsLoading(false));
-      setError('Aucune recherche correspondant au mot clé. ');
-      return;
     }
+  };
 
-    dispatch(searchbarActions.setIsLoading(false));
-    dispatch(tweetsModalActions.isOpen(true));
+  const handleSubmitQuery = async (query) => {
+    dispatch(searchbarActions.setIsLoading(true));
 
-    dispatch(timelineActions.setTweets({ tweets }))
+    if (error) setError(null);
 
-  }
+    await fetchTweetsByQuery(query);
+  };
 
   return (
-    <div id="querySearch" className={`flex res-f-height section-padding`}>
+    <div id="querySearch" className="flex res-f-height section-padding">
       <Searchbar
-        description="Rechercher par mot clé"
-        placeholder="Entrer un mot clé!"
+        description="Search by keyword"
+        placeholder="Enter a keyword!"
         handleSubmit={handleSubmitQuery}
       >
         {error && <Error message={error} querySearch marginTop />}
       </Searchbar>
     </div>
-  )
-}
+  );
+};
 
-export default QuerySearch
+export default QuerySearch;
 

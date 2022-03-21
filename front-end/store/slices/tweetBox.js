@@ -1,22 +1,19 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    loading: false,
-    displayTweetBox: false,
+  isLoading: false,
 };
 
-const tweetBoxSlice = createSlice({
-    name: 'tweetBox',
-    initialState, 
-    reducers: {
-        displayTweetBox(state, action){
-            state.displayTweetBox = action.payload;
-        },
-        setIsLoading(state, action){
-            state.loading = action.payload;
-        }
-    }
+const searchbarSlice = createSlice({
+  name: 'searchbar',
+  initialState,
+  reducers: {
+    setIsLoading(state, action) {
+      state.isLoading = action.payload;
+    },
+  },
 });
 
-export const tweetsActions = tweetBoxSlice.actions;
-export default tweetBoxSlice.reducer;
+export const { setIsLoading } = searchbarSlice.actions;
+export default searchbarSlice.reducer;
+

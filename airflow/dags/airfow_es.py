@@ -1,80 +1,74 @@
-import datetime, time
+import datetime
 import pendulum
 import logging
-
 
 import snscrape.modules.twitter as twitter
 from langdetect import detect
 from elasticsearch import Elasticsearch
-import json
 
-import airflow 
-from airflow import DAG 
+import airflow
+from airflow import DAG
 from airflow.models import DagRun
+from airflow.operators.python import PythonOperator
 
-from airflow.operators.python import PythonOperator 
+tweets_index = 'my_index'  # Name of the Elasticsearch index
 
+location = "Abidjan"  # Location parameter for searching tweets
+languages = ['fr', 'en']  # List of languages to filter the tweets
+maxTweets = 20  # Maximum number of tweets to scrape
 
-tweets_index = 'my_index'
-
-location="Abidjan"
-languages=['fr', 'en']
-maxTweets = 20
-
-# Creation d'une instance python elasticsearch
-es = Elasticsearch('http://localhost:9200')
+es = Elasticsearch('http://localhost:9200')  # Elasticsearch client instance
 
 
-# Verifie l'existence d'un index ou le cree si l'index n'existe pas
-def get_instance_func():
+def create_index_if_not_exists():
+    """
+    Check if the Elasticsearch index exists and create it if it doesn't.
+    """
     if not es.indices.exists(index=tweets_index):
         es.indices.create(index=tweets_index)
- 
 
-# Definition d'une instance DAG airflow
-# L'interval d'execution est indique dans schedule_interval
+
 dag = DAG(
     dag_id="data_pipeline",
-    description="DAG pour extraction des donnees sur Twitter",
+    description="DAG for extracting data from Twitter",
     start_date=pendulum.datetime(2022, 8, 9),
     schedule_interval='*/5 * * * *',
     catchup=False,
 )
 
-# Cette function va retourner la derniere execution de l'instance DAG
+
 def get_most_recent_dag_run(dag_id):
+    """
+    Retrieve the most recent execution of the specified DAG.
+    """
     dag_runs = DagRun.find(dag_id=dag_id)
     dag_runs.sort(key=lambda x: x.data_interval_end, reverse=True)
     return dag_runs[0] if dag_runs else None
 
 
-# On utilise la function get_most_recent_dag_run pour obtenir
-# le derniere interval d'execution pour commencer le scraping 
-# a la derniere execution du code
+# Get the most recent DAG run to determine the scraping time window
 dag_run = get_most_recent_dag_run('data_pipeline')
 if dag_run:
-    start_time =  int(dag_run.data_interval_start.timestamp())
+    start_time = int(dag_run.data_interval_start.timestamp())
     end_time = int(dag_run.data_interval_end.timestamp())
 
 
-# C'est la function qui nous permet de faire du scraping avec la framework
-# SNSCrape et mettre les donnees dans sur notre instance elasticsearch 
 def tweet_to_es_func():
-
-    # try:
-    #     conn = sqlite3.connect('user_of_day')
-    #     cursor = conn.cursor()
-    #     logging.info('Connected to SQLite')
-
+    """
+    Perform scraping with SNSCrape and store the tweets in Elasticsearch.
+    """
     for i, tweet in enumerate(twitter.TwitterSearchScraper(f'near:{location} since:{start_time} until:{end_time}').get_items()):
         try:
-            lang=detect(tweet.content)
+            lang = detect(tweet.content)  # Detect the language of the tweet
         except:
-            lang='error'
-        if i >= maxTweets: break
+            lang = 'error'
+
+        if i >= maxTweets:
+            break
+
         ids = []
         if lang in languages:
-            tweet = {
+            tweet_data = {
                 "id": tweet.id,
                 "user_id": tweet.user.id,
                 "username": tweet.user.username,
@@ -88,21 +82,17 @@ def tweet_to_es_func():
                 "tweet_content": tweet.content,
                 "likes_count": tweet.likeCount,
                 "tweet_url": tweet.url,
-    }
-                    
-            es.index(index=tweets_index, id=f'{tweet["id"]}', document=tweet)
-            ids.append(tweet['user_id'])
-        # with open("ids.txt", "a") as f:
-        #     for id in ids:
-        #         f.write(f"{id}\n")
-    
+            }
+            es.index(index=tweets_index, id=f'{tweet_data["id"]}', document=tweet_data)  # Store the tweet in Elasticsearch
+            ids.append(tweet_data['user_id'])
 
-# On utilise un operateur python pour notre workflow 
+
+# Define a PythonOperator to execute the scraping function
 tweet_es = PythonOperator(
     task_id="tweets_to_es",
     python_callable=tweet_to_es_func,
     dag=dag,
 )
 
-# Execution du workflow
-tweet_es
+tweet_es  # Execute the workflow
+

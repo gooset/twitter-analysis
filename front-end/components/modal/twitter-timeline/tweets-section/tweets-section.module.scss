@@ -1,44 +1,46 @@
 @import '../../../../styles/abstracts/all';
 
-.tweetsSection{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-color: $main-color;
-    padding: 4rem;
-    border-radius: 2rem;
+.tweetsSection {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: $main-color;
+  padding: 4rem;
+  border-radius: 2rem;
+  
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: auto;
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  & .title {
+    color: #fff;
+    font-size: 2.4rem;
+    font-weight: 500;
     
-    -ms-overflow-style: none; /* for Internet Explorer, Edge */
-    scrollbar-width: none; /* for Firefox,  Edge */
-    overflow-y: auto;
-    &::-webkit-scrollbar {
-        display: none; /* for Chrome, Safari, and Opera */
+    @media (max-width: 768px) {
+      font-size: 1.8rem;
     }
-
-    & .title{
-        color: #fff;
-        font-size: 2.4rem;
-        font-weight: 500;
-        @media (max-width: 768px) { 
-            font-size: 1.8rem;
-        }
-    }
+  }
 }
 
-//Mobile
-@media (max-width: 992px){
-    .tweetsSection{
-        padding: 2rem;
-    }
+@media (max-width: 992px) {
+  .tweetsSection {
+    padding: 2rem;
+  }
 }
 
-@media (max-width: 428px){
-    .tweetsSection{
-        padding: 1rem;
-
-        & .title{
-            font-size: 1.5rem;
-            margin-left: 1rem;
-        }
+@media (max-width: 428px) {
+  .tweetsSection {
+    padding: 1rem;
+    
+    & .title {
+      font-size: 1.5rem;
+      margin-left: 1rem;
     }
+  }
 }
+
