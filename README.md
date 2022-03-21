@@ -60,7 +60,7 @@ The application consists of the following components:
 
 1. On the home page, enter a keyword or a Twitter username in the respective search bar.
 2. Click the "Search" button or press Enter to retrieve the relevant tweets.
-3. Explore the search results, view individual tweets, and perform sentiment analysis if desired.
+3. Explore the search results, view individual tweets, and view traits analysis.
 4. Navigate through the different sections of the app to analyze and visualize the tweets.
 
 ## Contributing
