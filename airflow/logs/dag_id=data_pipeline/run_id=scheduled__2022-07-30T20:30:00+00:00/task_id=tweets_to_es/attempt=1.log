@@ -1,0 +1,74 @@
+[2022-07-30 21:40:03,114] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: data_pipeline.tweets_to_es scheduled__2022-07-30T20:30:00+00:00 [queued]>
+[2022-07-30 21:40:03,122] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: data_pipeline.tweets_to_es scheduled__2022-07-30T20:30:00+00:00 [queued]>
+[2022-07-30 21:40:03,122] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-07-30 21:40:03,122] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-07-30 21:40:03,122] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-07-30 21:40:03,135] {taskinstance.py:1378} INFO - Executing <Task(PythonOperator): tweets_to_es> on 2022-07-30 20:30:00+00:00
+[2022-07-30 21:40:03,138] {standard_task_runner.py:52} INFO - Started process 16691 to run task
+[2022-07-30 21:40:03,141] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'data_pipeline', 'tweets_to_es', 'scheduled__2022-07-30T20:30:00+00:00', '--job-id', '51', '--raw', '--subdir', 'DAGS_FOLDER/airfow_es.py', '--cfg-path', '/tmp/tmp0xklo2sl', '--error-file', '/tmp/tmprxdby7tt']
+[2022-07-30 21:40:03,142] {standard_task_runner.py:80} INFO - Job 51: Subtask tweets_to_es
+[2022-07-30 21:40:03,177] {task_command.py:370} INFO - Running <TaskInstance: data_pipeline.tweets_to_es scheduled__2022-07-30T20:30:00+00:00 [running]> on host oury-Tp
+[2022-07-30 21:40:03,220] {taskinstance.py:1570} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=data_pipeline
+AIRFLOW_CTX_TASK_ID=tweets_to_es
+AIRFLOW_CTX_EXECUTION_DATE=2022-07-30T20:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-07-30T20:30:00+00:00
+[2022-07-30 21:40:03,222] {twitter.py:696} INFO - Retrieving scroll page None
+[2022-07-30 21:40:03,222] {twitter.py:626} INFO - Retrieving guest token
+[2022-07-30 21:40:03,223] {base.py:171} INFO - Retrieving https://twitter.com/search?f=live&lang=en&q=near%3AParis+since%3A1659213000+until%3A1659213600&src=spelling_expansion_revert_click
+[2022-07-30 21:40:20,255] {base.py:189} INFO - Retrieved https://twitter.com/search?f=live&lang=en&q=near%3AParis+since%3A1659213000+until%3A1659213600&src=spelling_expansion_revert_click: 200
+[2022-07-30 21:40:20,264] {base.py:171} INFO - Retrieving https://api.twitter.com/2/search/adaptive.json?include_profile_interstitial_type=1&include_blocking=1&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1&include_can_dm=1&include_can_media_tag=1&skip_status=1&cards_platform=Web-12&include_cards=1&include_ext_alt_text=true&include_quote_count=true&include_reply_count=1&tweet_mode=extended&include_entities=true&include_user_entities=true&include_ext_media_color=true&include_ext_media_availability=true&send_error_codes=true&simple_quoted_tweets=true&q=near%3AParis+since%3A1659213000+until%3A1659213600&tweet_search_mode=live&count=100&query_source=spelling_expansion_revert_click&pc=1&spelling_corrections=1&ext=mediaStats%2ChighlightedLabel
+[2022-07-30 21:40:26,664] {process_utils.py:125} INFO - Sending Signals.SIGTERM to group 16691. PIDs of all processes in the group: [16691]
+[2022-07-30 21:40:26,665] {process_utils.py:80} INFO - Sending the signal Signals.SIGTERM to group 16691
+[2022-07-30 21:40:26,665] {taskinstance.py:1542} ERROR - Received SIGTERM. Terminating subprocesses.
+[2022-07-30 21:40:26,692] {taskinstance.py:1890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/oury/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/oury/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/oury/airflow/dags/airfow_es.py", line 79, in tweet_to_es_func
+    for i, tweet in enumerate(twitter.TwitterSearchScraper(f'near:{location} since:{start_time} until:{end_time}').get_items()):
+  File "/home/oury/.local/lib/python3.10/site-packages/snscrape/modules/twitter.py", line 1405, in get_items
+    for obj in self._iter_api_data('https://api.twitter.com/2/search/adaptive.json', _TwitterAPIType.V2, params, paginationParams, cursor = self._cursor):
+  File "/home/oury/.local/lib/python3.10/site-packages/snscrape/modules/twitter.py", line 697, in _iter_api_data
+    obj = self._get_api_data(endpoint, apiType, reqParams)
+  File "/home/oury/.local/lib/python3.10/site-packages/snscrape/modules/twitter.py", line 667, in _get_api_data
+    r = self._get(endpoint, params = params, headers = self._apiHeaders, responseOkCallback = self._check_api_response)
+  File "/home/oury/.local/lib/python3.10/site-packages/snscrape/base.py", line 221, in _get
+    return self._request('GET', *args, **kwargs)
+  File "/home/oury/.local/lib/python3.10/site-packages/snscrape/base.py", line 178, in _request
+    r = self._session.send(req, allow_redirects = allowRedirects, timeout = timeout, **environmentSettings)
+  File "/home/oury/.local/lib/python3.10/site-packages/requests/sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/oury/.local/lib/python3.10/site-packages/requests/adapters.py", line 440, in send
+    resp = conn.urlopen(
+  File "/home/oury/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/home/oury/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/oury/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.10/http/client.py", line 1374, in getresponse
+    response.begin()
+  File "/usr/lib/python3.10/http/client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.10/http/client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.10/ssl.py", line 1273, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.10/ssl.py", line 1129, in read
+    return self._sslobj.read(len, buffer)
+  File "/home/oury/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 1544, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2022-07-30 21:40:26,705] {taskinstance.py:1396} INFO - Marking task as FAILED. dag_id=data_pipeline, task_id=tweets_to_es, execution_date=20220730T203000, start_date=20220730T204003, end_date=20220730T204026
+[2022-07-30 21:40:26,715] {standard_task_runner.py:92} ERROR - Failed to execute job 51 for task tweets_to_es (Task received SIGTERM signal; 16691)
+[2022-07-30 21:40:26,758] {process_utils.py:75} INFO - Process psutil.Process(pid=16691, status='terminated', exitcode=1, started='21:40:02') (16691) terminated with exit code 1

@@ -1,0 +1,81 @@
+@import "../../../../styles/abstracts/all";
+
+.userSection {
+  width: 35rem;
+  height: fit-content;
+  padding: 4rem;
+  border-radius: 2rem;
+  background-color: $secondary-color;
+
+  &_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    &Img {
+      width: 11rem;
+      height: 11rem;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    &Name {
+      display: block;
+      margin-top: 1.5rem;
+      color: #fff;
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+
+    & .topicName {
+      font-weight: 700;
+      font-size: 1.7rem;
+    }
+  }
+}
+
+@media (max-width: 428px) {
+  .userSection {
+    width: 100%;
+    height: 28rem;
+    justify-content: center;
+    padding: 0;
+
+    &_info {
+      height: 100%;
+      justify-content: center;
+
+      &Name {
+        margin-top: 1rem;
+        font-size: 1.7rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .userSection {
+    width: 100%;
+    padding: 2rem;
+
+    &_info {
+      &Img {
+        width: 8rem;
+        height: 8rem;
+      }
+
+      &Name {
+        margin-top: 1.2rem;
+      }
+
+      & .topicName {
+        font-weight: 600;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+[2022-07-30 23:30:04,002] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: data_pipeline.tweets_to_es scheduled__2022-07-30T22:20:00+00:00 [queued]>
+[2022-07-30 23:30:04,010] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: data_pipeline.tweets_to_es scheduled__2022-07-30T22:20:00+00:00 [queued]>
+[2022-07-30 23:30:04,011] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-07-30 23:30:04,011] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-07-30 23:30:04,011] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-07-30 23:30:04,028] {taskinstance.py:1378} INFO - Executing <Task(PythonOperator): tweets_to_es> on 2022-07-30 22:20:00+00:00
+[2022-07-30 23:30:04,032] {standard_task_runner.py:52} INFO - Started process 7251 to run task
+[2022-07-30 23:30:04,035] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'data_pipeline', 'tweets_to_es', 'scheduled__2022-07-30T22:20:00+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/airfow_es.py', '--cfg-path', '/tmp/tmp_gyncsa5', '--error-file', '/tmp/tmpfp4_7iu8']
+[2022-07-30 23:30:04,036] {standard_task_runner.py:80} INFO - Job 14: Subtask tweets_to_es
+[2022-07-30 23:30:04,079] {task_command.py:370} INFO - Running <TaskInstance: data_pipeline.tweets_to_es scheduled__2022-07-30T22:20:00+00:00 [running]> on host oury-Tp
+[2022-07-30 23:30:04,129] {taskinstance.py:1570} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=data_pipeline
+AIRFLOW_CTX_TASK_ID=tweets_to_es
+AIRFLOW_CTX_EXECUTION_DATE=2022-07-30T22:20:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-07-30T22:20:00+00:00
+[2022-07-30 23:30:04,131] {twitter.py:696} INFO - Retrieving scroll page None
+[2022-07-30 23:30:04,131] {twitter.py:626} INFO - Retrieving guest token
+[2022-07-30 23:30:04,132] {base.py:171} INFO - Retrieving https://twitter.com/search?f=live&lang=en&q=near%3AParis+since%3A1659219600+until%3A1659220200&src=spelling_expansion_revert_click
+[2022-07-30 23:30:04,811] {base.py:189} INFO - Retrieved https://twitter.com/search?f=live&lang=en&q=near%3AParis+since%3A1659219600+until%3A1659220200&src=spelling_expansion_revert_click: 200
+[2022-07-30 23:30:04,814] {base.py:171} INFO - Retrieving https://api.twitter.com/2/search/adaptive.json?include_profile_interstitial_type=1&include_blocking=1&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1&include_can_dm=1&include_can_media_tag=1&skip_status=1&cards_platform=Web-12&include_cards=1&include_ext_alt_text=true&include_quote_count=true&include_reply_count=1&tweet_mode=extended&include_entities=true&include_user_entities=true&include_ext_media_color=true&include_ext_media_availability=true&send_error_codes=true&simple_quoted_tweets=true&q=near%3AParis+since%3A1659219600+until%3A1659220200&tweet_search_mode=live&count=100&query_source=spelling_expansion_revert_click&pc=1&spelling_corrections=1&ext=mediaStats%2ChighlightedLabel
+[2022-07-30 23:30:05,907] {base.py:189} INFO - Retrieved https://api.twitter.com/2/search/adaptive.json?include_profile_interstitial_type=1&include_blocking=1&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1&include_can_dm=1&include_can_media_tag=1&skip_status=1&cards_platform=Web-12&include_cards=1&include_ext_alt_text=true&include_quote_count=true&include_reply_count=1&tweet_mode=extended&include_entities=true&include_user_entities=true&include_ext_media_color=true&include_ext_media_availability=true&send_error_codes=true&simple_quoted_tweets=true&q=near%3AParis+since%3A1659219600+until%3A1659220200&tweet_search_mode=live&count=100&query_source=spelling_expansion_revert_click&pc=1&spelling_corrections=1&ext=mediaStats%2ChighlightedLabel: 200
+[2022-07-30 23:30:06,966] {base.py:265} INFO - GET http://localhost:9200/ [status:200 request:0.027s]
+[2022-07-30 23:30:06,985] {base.py:265} INFO - PUT http://localhost:9200/my_index/_doc/1553508231594614785 [status:201 request:0.018s]
+[2022-07-30 23:30:07,015] {base.py:265} INFO - PUT http://localhost:9200/my_index/_doc/1553508228528496642 [status:201 request:0.011s]
+[2022-07-30 23:30:07,046] {base.py:265} INFO - PUT http://localhost:9200/my_index/_doc/1553508225982545921 [status:201 request:0.024s]
+[2022-07-30 23:30:07,136] {base.py:265} INFO - PUT http://localhost:9200/my_index/_doc/1553508224258670594 [status:201 request:0.018s]
+[2022-07-30 23:30:07,177] {base.py:265} INFO - PUT http://localhost:9200/my_index/_doc/1553508223583485953 [status:201 request:0.021s]
+[2022-07-30 23:30:07,206] {base.py:265} INFO - PUT http://localhost:9200/my_index/_doc/1553508223449067520 [status:201 request:0.020s]
+[2022-07-30 23:30:07,295] {base.py:265} INFO - PUT http://localhost:9200/my_index/_doc/1553508219611480066 [status:201 request:0.017s]
+[2022-07-30 23:30:07,355] {python.py:173} INFO - Done. Returned value was: None
+[2022-07-30 23:30:07,367] {taskinstance.py:1396} INFO - Marking task as SUCCESS. dag_id=data_pipeline, task_id=tweets_to_es, execution_date=20220730T222000, start_date=20220730T223004, end_date=20220730T223007
+[2022-07-30 23:30:07,426] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-07-30 23:30:07,446] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

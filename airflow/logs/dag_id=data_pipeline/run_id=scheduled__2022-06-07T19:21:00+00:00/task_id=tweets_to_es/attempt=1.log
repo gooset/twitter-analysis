@@ -1,0 +1,58 @@
+[2022-06-07 20:24:02,539] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: data_pipeline.tweets_to_es scheduled__2022-06-07T19:21:00+00:00 [queued]>
+[2022-06-07 20:24:02,544] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: data_pipeline.tweets_to_es scheduled__2022-06-07T19:21:00+00:00 [queued]>
+[2022-06-07 20:24:02,545] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 20:24:02,545] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-06-07 20:24:02,545] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 20:24:02,556] {taskinstance.py:1378} INFO - Executing <Task(PythonOperator): tweets_to_es> on 2022-06-07 19:21:00+00:00
+[2022-06-07 20:24:02,558] {standard_task_runner.py:52} INFO - Started process 15496 to run task
+[2022-06-07 20:24:02,561] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'data_pipeline', 'tweets_to_es', 'scheduled__2022-06-07T19:21:00+00:00', '--job-id', '48', '--raw', '--subdir', 'DAGS_FOLDER/airfow_es.py', '--cfg-path', '/tmp/tmp67_ia3hv', '--error-file', '/tmp/tmprke1at6r']
+[2022-06-07 20:24:02,561] {standard_task_runner.py:80} INFO - Job 48: Subtask tweets_to_es
+[2022-06-07 20:24:02,593] {task_command.py:370} INFO - Running <TaskInstance: data_pipeline.tweets_to_es scheduled__2022-06-07T19:21:00+00:00 [running]> on host oury-Tp
+[2022-06-07 20:24:02,638] {taskinstance.py:1570} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=data_pipeline
+AIRFLOW_CTX_TASK_ID=tweets_to_es
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-07T19:21:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-07T19:21:00+00:00
+[2022-06-07 20:24:02,639] {twitter.py:696} INFO - Retrieving scroll page None
+[2022-06-07 20:24:02,639] {twitter.py:626} INFO - Retrieving guest token
+[2022-06-07 20:24:02,641] {base.py:171} INFO - Retrieving https://twitter.com/search?f=live&lang=en&q=near%3AParis+since%3A2022-06-07T19%3A21%3A00%2B00%3A00+until%3A2022-06-07T19%3A24%3A00%2B00%3A00&src=spelling_expansion_revert_click
+[2022-06-07 20:24:02,645] {base.py:186} INFO - Error retrieving https://twitter.com/search?f=live&lang=en&q=near%3AParis+since%3A2022-06-07T19%3A21%3A00%2B00%3A00+until%3A2022-06-07T19%3A24%3A00%2B00%3A00&src=spelling_expansion_revert_click: ConnectionError(MaxRetryError("HTTPSConnectionPool(host='twitter.com', port=443): Max retries exceeded with url: /search?f=live&lang=en&q=near%3AParis+since%3A2022-06-07T19%3A21%3A00%2B00%3A00+until%3A2022-06-07T19%3A24%3A00%2B00%3A00&src=spelling_expansion_revert_click (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3d623e73d0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))")), retrying
+[2022-06-07 20:24:02,645] {base.py:212} INFO - Waiting 1 seconds
+[2022-06-07 20:24:03,647] {base.py:171} INFO - Retrieving https://twitter.com/search?f=live&lang=en&q=near%3AParis+since%3A2022-06-07T19%3A21%3A00%2B00%3A00+until%3A2022-06-07T19%3A24%3A00%2B00%3A00&src=spelling_expansion_revert_click
+[2022-06-07 20:24:03,649] {base.py:186} INFO - Error retrieving https://twitter.com/search?f=live&lang=en&q=near%3AParis+since%3A2022-06-07T19%3A21%3A00%2B00%3A00+until%3A2022-06-07T19%3A24%3A00%2B00%3A00&src=spelling_expansion_revert_click: ConnectionError(MaxRetryError("HTTPSConnectionPool(host='twitter.com', port=443): Max retries exceeded with url: /search?f=live&lang=en&q=near%3AParis+since%3A2022-06-07T19%3A21%3A00%2B00%3A00+until%3A2022-06-07T19%3A24%3A00%2B00%3A00&src=spelling_expansion_revert_click (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3d623e6590>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))")), retrying
+[2022-06-07 20:24:03,649] {base.py:212} INFO - Waiting 2 seconds
+[2022-06-07 20:24:05,653] {base.py:171} INFO - Retrieving https://twitter.com/search?f=live&lang=en&q=near%3AParis+since%3A2022-06-07T19%3A21%3A00%2B00%3A00+until%3A2022-06-07T19%3A24%3A00%2B00%3A00&src=spelling_expansion_revert_click
+[2022-06-07 20:24:05,655] {base.py:186} INFO - Error retrieving https://twitter.com/search?f=live&lang=en&q=near%3AParis+since%3A2022-06-07T19%3A21%3A00%2B00%3A00+until%3A2022-06-07T19%3A24%3A00%2B00%3A00&src=spelling_expansion_revert_click: ConnectionError(MaxRetryError("HTTPSConnectionPool(host='twitter.com', port=443): Max retries exceeded with url: /search?f=live&lang=en&q=near%3AParis+since%3A2022-06-07T19%3A21%3A00%2B00%3A00+until%3A2022-06-07T19%3A24%3A00%2B00%3A00&src=spelling_expansion_revert_click (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3d623e7cd0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))")), retrying
+[2022-06-07 20:24:05,655] {base.py:212} INFO - Waiting 4 seconds
+[2022-06-07 20:24:09,661] {base.py:171} INFO - Retrieving https://twitter.com/search?f=live&lang=en&q=near%3AParis+since%3A2022-06-07T19%3A21%3A00%2B00%3A00+until%3A2022-06-07T19%3A24%3A00%2B00%3A00&src=spelling_expansion_revert_click
+[2022-06-07 20:24:09,666] {base.py:186} ERROR - Error retrieving https://twitter.com/search?f=live&lang=en&q=near%3AParis+since%3A2022-06-07T19%3A21%3A00%2B00%3A00+until%3A2022-06-07T19%3A24%3A00%2B00%3A00&src=spelling_expansion_revert_click: ConnectionError(MaxRetryError("HTTPSConnectionPool(host='twitter.com', port=443): Max retries exceeded with url: /search?f=live&lang=en&q=near%3AParis+since%3A2022-06-07T19%3A21%3A00%2B00%3A00+until%3A2022-06-07T19%3A24%3A00%2B00%3A00&src=spelling_expansion_revert_click (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f3d623e7c40>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))"))
+[2022-06-07 20:24:09,666] {base.py:216} CRITICAL - 4 requests to https://twitter.com/search?f=live&lang=en&q=near%3AParis+since%3A2022-06-07T19%3A21%3A00%2B00%3A00+until%3A2022-06-07T19%3A24%3A00%2B00%3A00&src=spelling_expansion_revert_click failed, giving up.
+[2022-06-07 20:24:09,666] {taskinstance.py:1890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/oury/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/oury/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/oury/airflow/dags/airfow_es.py", line 30, in tweet_to_es_func
+    for i, tweet in enumerate(twitter.TwitterSearchScraper(f'near:{location} since:{start_time} until:{end_time}').get_items()):
+  File "/home/oury/.local/lib/python3.10/site-packages/snscrape/modules/twitter.py", line 1405, in get_items
+    for obj in self._iter_api_data('https://api.twitter.com/2/search/adaptive.json', _TwitterAPIType.V2, params, paginationParams, cursor = self._cursor):
+  File "/home/oury/.local/lib/python3.10/site-packages/snscrape/modules/twitter.py", line 697, in _iter_api_data
+    obj = self._get_api_data(endpoint, apiType, reqParams)
+  File "/home/oury/.local/lib/python3.10/site-packages/snscrape/modules/twitter.py", line 664, in _get_api_data
+    self._ensure_guest_token()
+  File "/home/oury/.local/lib/python3.10/site-packages/snscrape/modules/twitter.py", line 627, in _ensure_guest_token
+    r = self._get(self._baseUrl if url is None else url, headers = {'User-Agent': self._userAgent}, responseOkCallback = self._check_guest_token_response)
+  File "/home/oury/.local/lib/python3.10/site-packages/snscrape/base.py", line 221, in _get
+    return self._request('GET', *args, **kwargs)
+  File "/home/oury/.local/lib/python3.10/site-packages/snscrape/base.py", line 217, in _request
+    raise ScraperException(msg)
+snscrape.base.ScraperException: 4 requests to https://twitter.com/search?f=live&lang=en&q=near%3AParis+since%3A2022-06-07T19%3A21%3A00%2B00%3A00+until%3A2022-06-07T19%3A24%3A00%2B00%3A00&src=spelling_expansion_revert_click failed, giving up.
+[2022-06-07 20:24:09,677] {taskinstance.py:1396} INFO - Marking task as FAILED. dag_id=data_pipeline, task_id=tweets_to_es, execution_date=20220607T192100, start_date=20220607T192402, end_date=20220607T192409
+[2022-06-07 20:24:09,696] {standard_task_runner.py:92} ERROR - Failed to execute job 48 for task tweets_to_es (4 requests to https://twitter.com/search?f=live&lang=en&q=near%3AParis+since%3A2022-06-07T19%3A21%3A00%2B00%3A00+until%3A2022-06-07T19%3A24%3A00%2B00%3A00&src=spelling_expansion_revert_click failed, giving up.; 15496)
+[2022-06-07 20:24:09,704] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-06-07 20:24:09,713] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

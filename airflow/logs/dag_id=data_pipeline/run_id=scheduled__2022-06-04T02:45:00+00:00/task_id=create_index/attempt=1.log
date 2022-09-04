@@ -1,0 +1,29 @@
+[2022-06-06 00:17:33,800] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: data_pipeline.create_index scheduled__2022-06-04T02:45:00+00:00 [queued]>
+[2022-06-06 00:17:33,807] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: data_pipeline.create_index scheduled__2022-06-04T02:45:00+00:00 [queued]>
+[2022-06-06 00:17:33,807] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-06 00:17:33,807] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-06-06 00:17:33,807] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-06 00:17:33,822] {taskinstance.py:1378} INFO - Executing <Task(PythonOperator): create_index> on 2022-06-04 02:45:00+00:00
+[2022-06-06 00:17:33,825] {standard_task_runner.py:52} INFO - Started process 55580 to run task
+[2022-06-06 00:17:33,829] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'data_pipeline', 'create_index', 'scheduled__2022-06-04T02:45:00+00:00', '--job-id', '99', '--raw', '--subdir', 'DAGS_FOLDER/airfow_es.py', '--cfg-path', '/tmp/tmpaankjkin', '--error-file', '/tmp/tmp1_srvj3q']
+[2022-06-06 00:17:33,829] {standard_task_runner.py:80} INFO - Job 99: Subtask create_index
+[2022-06-06 00:17:33,861] {task_command.py:370} INFO - Running <TaskInstance: data_pipeline.create_index scheduled__2022-06-04T02:45:00+00:00 [running]> on host oury-Tp
+[2022-06-06 00:17:33,905] {taskinstance.py:1570} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=data_pipeline
+AIRFLOW_CTX_TASK_ID=create_index
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-04T02:45:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-04T02:45:00+00:00
+[2022-06-06 00:17:33,906] {taskinstance.py:1890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/oury/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/oury/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+TypeError: get_instance_func() missing 1 required positional argument: 'es'
+[2022-06-06 00:17:33,909] {taskinstance.py:1396} INFO - Marking task as FAILED. dag_id=data_pipeline, task_id=create_index, execution_date=20220604T024500, start_date=20220605T231733, end_date=20220605T231733
+[2022-06-06 00:17:33,919] {standard_task_runner.py:92} ERROR - Failed to execute job 99 for task create_index (get_instance_func() missing 1 required positional argument: 'es'; 55580)
+[2022-06-06 00:17:33,960] {local_task_job.py:156} INFO - Task exited with return code 1

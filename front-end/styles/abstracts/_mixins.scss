@@ -1,0 +1,46 @@
+@mixin text-gradient {
+  background: linear-gradient(26deg, rgb(0, 0, 0) 0%, rgb(255, 255, 255) 100%);
+  background: -webkit-linear-gradient(26deg, rgb(0, 0, 0) 0%, rgb(255, 255, 255) 100%);
+  background: -ms-linear-gradient(26deg, rgb(0, 0, 0) 0%, rgb(255, 255, 255) 100%);
+  background: -o-linear-gradient(26deg, rgb(0, 0, 0) 0%, rgb(255, 255, 255) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+//added inside an absolute positioned ::before or ::after 
+@mixin overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+@mixin glassmorphism {
+  background: rgba(61, 61, 61, 0.75); 
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  
+  /* if backdrop support: very transparent and blurred */
+  @supports ((-webkit-backdrop-filter: blur( 8px )) or (backdrop-filter: blur( 4px ))) {
+      background: rgba( 0, 0, 0, 0.75 );
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+  }
+}
+
+@mixin fixed-modal { 
+  position: fixed;             
+  top: 0;
+  left: 0; 
+  height: 100%;
+  width: 100%;
+}
+
+@mixin remove-user-select {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}

@@ -1,0 +1,69 @@
+[2022-06-06 10:00:06,167] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: data_pipeline.tweets_to_es scheduled__2022-06-06T04:00:00+00:00 [queued]>
+[2022-06-06 10:00:06,173] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: data_pipeline.tweets_to_es scheduled__2022-06-06T04:00:00+00:00 [queued]>
+[2022-06-06 10:00:06,173] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-06 10:00:06,173] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-06-06 10:00:06,173] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-06 10:00:06,185] {taskinstance.py:1378} INFO - Executing <Task(PythonOperator): tweets_to_es> on 2022-06-06 04:00:00+00:00
+[2022-06-06 10:00:06,188] {standard_task_runner.py:52} INFO - Started process 7766 to run task
+[2022-06-06 10:00:06,191] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'data_pipeline', 'tweets_to_es', 'scheduled__2022-06-06T04:00:00+00:00', '--job-id', '50', '--raw', '--subdir', 'DAGS_FOLDER/airfow_es.py', '--cfg-path', '/tmp/tmpd9n136b3', '--error-file', '/tmp/tmpyle4chsj']
+[2022-06-06 10:00:06,191] {standard_task_runner.py:80} INFO - Job 50: Subtask tweets_to_es
+[2022-06-06 10:00:06,222] {task_command.py:370} INFO - Running <TaskInstance: data_pipeline.tweets_to_es scheduled__2022-06-06T04:00:00+00:00 [running]> on host oury-Tp
+[2022-06-06 10:00:06,265] {taskinstance.py:1570} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=data_pipeline
+AIRFLOW_CTX_TASK_ID=tweets_to_es
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-06T04:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-06T04:00:00+00:00
+[2022-06-06 10:00:06,266] {twitter.py:696} INFO - Retrieving scroll page None
+[2022-06-06 10:00:06,267] {twitter.py:626} INFO - Retrieving guest token
+[2022-06-06 10:00:06,268] {base.py:171} INFO - Retrieving https://twitter.com/search?f=live&lang=en&q=near%3ATunis+since%3A1654505705+until%3A1654506005&src=spelling_expansion_revert_click
+[2022-06-06 10:00:06,810] {base.py:189} INFO - Retrieved https://twitter.com/search?f=live&lang=en&q=near%3ATunis+since%3A1654505705+until%3A1654506005&src=spelling_expansion_revert_click: 200
+[2022-06-06 10:00:06,813] {base.py:171} INFO - Retrieving https://api.twitter.com/2/search/adaptive.json?include_profile_interstitial_type=1&include_blocking=1&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1&include_can_dm=1&include_can_media_tag=1&skip_status=1&cards_platform=Web-12&include_cards=1&include_ext_alt_text=true&include_quote_count=true&include_reply_count=1&tweet_mode=extended&include_entities=true&include_user_entities=true&include_ext_media_color=true&include_ext_media_availability=true&send_error_codes=true&simple_quoted_tweets=true&q=near%3ATunis+since%3A1654505705+until%3A1654506005&tweet_search_mode=live&count=100&query_source=spelling_expansion_revert_click&pc=1&spelling_corrections=1&ext=mediaStats%2ChighlightedLabel
+[2022-06-06 10:00:09,482] {base.py:189} INFO - Retrieved https://api.twitter.com/2/search/adaptive.json?include_profile_interstitial_type=1&include_blocking=1&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1&include_can_dm=1&include_can_media_tag=1&skip_status=1&cards_platform=Web-12&include_cards=1&include_ext_alt_text=true&include_quote_count=true&include_reply_count=1&tweet_mode=extended&include_entities=true&include_user_entities=true&include_ext_media_color=true&include_ext_media_availability=true&send_error_codes=true&simple_quoted_tweets=true&q=near%3ATunis+since%3A1654505705+until%3A1654506005&tweet_search_mode=live&count=100&query_source=spelling_expansion_revert_click&pc=1&spelling_corrections=1&ext=mediaStats%2ChighlightedLabel: 200
+[2022-06-06 10:00:09,854] {logging_mixin.py:115} INFO - {'id': 1533735006551658497, 'username': 'FLASHMAGtn', 'tweet_date': datetime.datetime(2022, 6, 6, 8, 58, 15, tzinfo=datetime.timezone.utc), 'tweet_content': 'Quel visage pour la raie au milieu\xa0? https://t.co/eVbpFk4LMi', 'likes_count': 0, 'tweet_url': 'https://twitter.com/FLASHMAGtn/status/1533735006551658497', 'tweet_lang': 'fr'}
+[2022-06-06 10:00:09,856] {taskinstance.py:1890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/oury/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/oury/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/oury/airflow/dags/airfow_es.py", line 49, in tweet_to_es_func
+    index_es_func(tweets_index, tweet)
+TypeError: index_es_func() missing 1 required positional argument: 'tweet'
+[2022-06-06 10:00:09,859] {taskinstance.py:1396} INFO - Marking task as FAILED. dag_id=data_pipeline, task_id=tweets_to_es, execution_date=20220606T040000, start_date=20220606T090006, end_date=20220606T090009
+[2022-06-06 10:00:09,867] {standard_task_runner.py:92} ERROR - Failed to execute job 50 for task tweets_to_es (index_es_func() missing 1 required positional argument: 'tweet'; 7766)
+[2022-06-06 10:00:09,897] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-06-06 10:00:09,913] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-06-06 10:40:31,463] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: data_pipeline.tweets_to_es scheduled__2022-06-06T04:00:00+00:00 [queued]>
+[2022-06-06 10:40:31,469] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: data_pipeline.tweets_to_es scheduled__2022-06-06T04:00:00+00:00 [queued]>
+[2022-06-06 10:40:31,469] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-06 10:40:31,469] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-06-06 10:40:31,469] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-06 10:40:31,483] {taskinstance.py:1378} INFO - Executing <Task(PythonOperator): tweets_to_es> on 2022-06-06 04:00:00+00:00
+[2022-06-06 10:40:31,485] {standard_task_runner.py:52} INFO - Started process 15926 to run task
+[2022-06-06 10:40:31,489] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'data_pipeline', 'tweets_to_es', 'scheduled__2022-06-06T04:00:00+00:00', '--job-id', '50', '--raw', '--subdir', 'DAGS_FOLDER/airfow_es.py', '--cfg-path', '/tmp/tmpqq6ewrx2', '--error-file', '/tmp/tmpn42f98mf']
+[2022-06-06 10:40:31,490] {standard_task_runner.py:80} INFO - Job 50: Subtask tweets_to_es
+[2022-06-06 10:40:31,525] {task_command.py:370} INFO - Running <TaskInstance: data_pipeline.tweets_to_es scheduled__2022-06-06T04:00:00+00:00 [running]> on host oury-Tp
+[2022-06-06 10:40:31,572] {taskinstance.py:1570} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=data_pipeline
+AIRFLOW_CTX_TASK_ID=tweets_to_es
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-06T04:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-06T04:00:00+00:00
+[2022-06-06 10:40:31,574] {taskinstance.py:1890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/oury/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/oury/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+TypeError: tweet_to_es_func() missing 5 required positional arguments: 'es', 'start', 'end', 'location', and 'languages'
+[2022-06-06 10:40:31,578] {taskinstance.py:1396} INFO - Marking task as FAILED. dag_id=data_pipeline, task_id=tweets_to_es, execution_date=20220606T040000, start_date=20220606T094031, end_date=20220606T094031
+[2022-06-06 10:40:31,590] {standard_task_runner.py:92} ERROR - Failed to execute job 50 for task tweets_to_es (tweet_to_es_func() missing 5 required positional arguments: 'es', 'start', 'end', 'location', and 'languages'; 15926)
+[2022-06-06 10:40:31,621] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-06-06 10:40:31,637] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

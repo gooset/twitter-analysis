@@ -1,0 +1,57 @@
+@import '../../../styles/abstracts/all';
+
+
+.glass{
+    @include glassmorphism();
+}
+
+.loadingModal{
+    @include fixed-modal();
+    z-index: 98;
+
+    & .loadingBox{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 30rem;
+        max-width: 55rem;
+        width: 100%;
+        padding: 0 4rem;
+        transition: all ease .5s;
+ 
+        & .content{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: $main-color;
+            border-radius: $modal-radius;
+            background-color: #fff;
+            transition: all ease .5s;
+
+            & img{
+                height: 13rem;
+                transition: all ease .5s;
+            }
+
+            & span{
+                display: block;
+                margin-top: 1.5rem;
+                font-size: 1.6rem;
+                transition: all ease .5s;
+
+            }
+        }
+    }
+}
+
+@media (max-width: 428px){
+    .loadingModal{
+        & .loading-box{
+            padding: 0 4rem;
+        }
+    }
+}

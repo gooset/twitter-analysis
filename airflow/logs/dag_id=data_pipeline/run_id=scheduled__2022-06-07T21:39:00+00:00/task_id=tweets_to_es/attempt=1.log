@@ -1,0 +1,62 @@
+[2022-06-07 22:43:18,117] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: data_pipeline.tweets_to_es scheduled__2022-06-07T21:39:00+00:00 [queued]>
+[2022-06-07 22:43:18,122] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: data_pipeline.tweets_to_es scheduled__2022-06-07T21:39:00+00:00 [queued]>
+[2022-06-07 22:43:18,122] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 22:43:18,122] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-06-07 22:43:18,122] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 22:43:18,135] {taskinstance.py:1378} INFO - Executing <Task(PythonOperator): tweets_to_es> on 2022-06-07 21:39:00+00:00
+[2022-06-07 22:43:18,138] {standard_task_runner.py:52} INFO - Started process 4725 to run task
+[2022-06-07 22:43:18,141] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'data_pipeline', 'tweets_to_es', 'scheduled__2022-06-07T21:39:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/airfow_es.py', '--cfg-path', '/tmp/tmpr7rpg8o_', '--error-file', '/tmp/tmpe2cu42xf']
+[2022-06-07 22:43:18,141] {standard_task_runner.py:80} INFO - Job 2: Subtask tweets_to_es
+[2022-06-07 22:43:18,174] {task_command.py:370} INFO - Running <TaskInstance: data_pipeline.tweets_to_es scheduled__2022-06-07T21:39:00+00:00 [running]> on host oury-Tp
+[2022-06-07 22:43:18,218] {taskinstance.py:1570} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=data_pipeline
+AIRFLOW_CTX_TASK_ID=tweets_to_es
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-07T21:39:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-07T21:39:00+00:00
+[2022-06-07 22:43:18,220] {twitter.py:696} INFO - Retrieving scroll page None
+[2022-06-07 22:43:18,220] {twitter.py:626} INFO - Retrieving guest token
+[2022-06-07 22:43:18,221] {base.py:171} INFO - Retrieving https://twitter.com/search?f=live&lang=en&q=near%3AParis+since%3A1654638017+until%3A1654638197&src=spelling_expansion_revert_click
+[2022-06-07 22:43:19,099] {base.py:189} INFO - Retrieved https://twitter.com/search?f=live&lang=en&q=near%3AParis+since%3A1654638017+until%3A1654638197&src=spelling_expansion_revert_click: 200
+[2022-06-07 22:43:19,102] {base.py:171} INFO - Retrieving https://api.twitter.com/2/search/adaptive.json?include_profile_interstitial_type=1&include_blocking=1&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1&include_can_dm=1&include_can_media_tag=1&skip_status=1&cards_platform=Web-12&include_cards=1&include_ext_alt_text=true&include_quote_count=true&include_reply_count=1&tweet_mode=extended&include_entities=true&include_user_entities=true&include_ext_media_color=true&include_ext_media_availability=true&send_error_codes=true&simple_quoted_tweets=true&q=near%3AParis+since%3A1654638017+until%3A1654638197&tweet_search_mode=live&count=100&query_source=spelling_expansion_revert_click&pc=1&spelling_corrections=1&ext=mediaStats%2ChighlightedLabel
+[2022-06-07 22:43:20,137] {base.py:189} INFO - Retrieved https://api.twitter.com/2/search/adaptive.json?include_profile_interstitial_type=1&include_blocking=1&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1&include_can_dm=1&include_can_media_tag=1&skip_status=1&cards_platform=Web-12&include_cards=1&include_ext_alt_text=true&include_quote_count=true&include_reply_count=1&tweet_mode=extended&include_entities=true&include_user_entities=true&include_ext_media_color=true&include_ext_media_availability=true&send_error_codes=true&simple_quoted_tweets=true&q=near%3AParis+since%3A1654638017+until%3A1654638197&tweet_search_mode=live&count=100&query_source=spelling_expansion_revert_click&pc=1&spelling_corrections=1&ext=mediaStats%2ChighlightedLabel: 200
+[2022-06-07 22:43:23,251] {_transport.py:336} INFO - PUT http://localhost:9200/my_index/_doc/1534289915806097410 [status:201 duration:2.642s]
+[2022-06-07 22:43:23,304] {_transport.py:336} INFO - PUT http://localhost:9200/my_index/_doc/1534289905928572929 [status:201 duration:0.011s]
+[2022-06-07 22:43:23,318] {_transport.py:336} INFO - PUT http://localhost:9200/my_index/_doc/1534289905647509507 [status:201 duration:0.010s]
+[2022-06-07 22:43:23,411] {_transport.py:336} INFO - PUT http://localhost:9200/my_index/_doc/1534289898068488193 [status:201 duration:0.009s]
+[2022-06-07 22:43:23,425] {_transport.py:336} INFO - PUT http://localhost:9200/my_index/_doc/1534289897984610305 [status:201 duration:0.010s]
+[2022-06-07 22:43:23,440] {_transport.py:336} INFO - PUT http://localhost:9200/my_index/_doc/1534289896109637633 [status:201 duration:0.010s]
+[2022-06-07 22:43:23,501] {twitter.py:696} INFO - Retrieving scroll page scroll:thGAVUV0VFVBaEgL7p1KHyyioWhoCz0aSj8soqEnEV8IV6FYCJehgHREVGQVVMVDUBFQAVAAA=
+[2022-06-07 22:43:23,502] {base.py:171} INFO - Retrieving https://api.twitter.com/2/search/adaptive.json?include_profile_interstitial_type=1&include_blocking=1&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1&include_can_dm=1&include_can_media_tag=1&skip_status=1&cards_platform=Web-12&include_cards=1&include_ext_alt_text=true&include_quote_count=true&include_reply_count=1&tweet_mode=extended&include_entities=true&include_user_entities=true&include_ext_media_color=true&include_ext_media_availability=true&send_error_codes=true&simple_quoted_tweets=true&q=near%3AParis+since%3A1654638017+until%3A1654638197&tweet_search_mode=live&count=100&query_source=spelling_expansion_revert_click&cursor=scroll%3AthGAVUV0VFVBaEgL7p1KHyyioWhoCz0aSj8soqEnEV8IV6FYCJehgHREVGQVVMVDUBFQAVAAA%3D&pc=1&spelling_corrections=1&ext=mediaStats%2ChighlightedLabel
+[2022-06-07 22:43:24,420] {base.py:189} INFO - Retrieved https://api.twitter.com/2/search/adaptive.json?include_profile_interstitial_type=1&include_blocking=1&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1&include_can_dm=1&include_can_media_tag=1&skip_status=1&cards_platform=Web-12&include_cards=1&include_ext_alt_text=true&include_quote_count=true&include_reply_count=1&tweet_mode=extended&include_entities=true&include_user_entities=true&include_ext_media_color=true&include_ext_media_availability=true&send_error_codes=true&simple_quoted_tweets=true&q=near%3AParis+since%3A1654638017+until%3A1654638197&tweet_search_mode=live&count=100&query_source=spelling_expansion_revert_click&cursor=scroll%3AthGAVUV0VFVBaEgL7p1KHyyioWhoCz0aSj8soqEnEV8IV6FYCJehgHREVGQVVMVDUBFQAVAAA%3D&pc=1&spelling_corrections=1&ext=mediaStats%2ChighlightedLabel: 200
+[2022-06-07 22:43:24,436] {_transport.py:336} INFO - PUT http://localhost:9200/my_index/_doc/1534289889633751041 [status:201 duration:0.010s]
+[2022-06-07 22:43:24,452] {_transport.py:336} INFO - PUT http://localhost:9200/my_index/_doc/1534289888031477761 [status:201 duration:0.010s]
+[2022-06-07 22:43:24,481] {_transport.py:336} INFO - PUT http://localhost:9200/my_index/_doc/1534289887452700672 [status:201 duration:0.011s]
+[2022-06-07 22:43:24,521] {_transport.py:336} INFO - PUT http://localhost:9200/my_index/_doc/1534289884365656074 [status:201 duration:0.008s]
+[2022-06-07 22:43:24,534] {_transport.py:336} INFO - PUT http://localhost:9200/my_index/_doc/1534289883245727745 [status:201 duration:0.008s]
+[2022-06-07 22:43:24,551] {_transport.py:336} INFO - PUT http://localhost:9200/my_index/_doc/1534289881178034179 [status:201 duration:0.010s]
+[2022-06-07 22:43:24,569] {_transport.py:336} INFO - PUT http://localhost:9200/my_index/_doc/1534289877940023296 [status:201 duration:0.008s]
+[2022-06-07 22:43:24,591] {_transport.py:336} INFO - PUT http://localhost:9200/my_index/_doc/1534289876530745344 [status:201 duration:0.007s]
+[2022-06-07 22:43:24,612] {_transport.py:336} INFO - PUT http://localhost:9200/my_index/_doc/1534289876497186817 [status:201 duration:0.008s]
+[2022-06-07 22:43:24,627] {_transport.py:336} INFO - PUT http://localhost:9200/my_index/_doc/1534289875771412481 [status:201 duration:0.009s]
+[2022-06-07 22:43:24,639] {_transport.py:336} INFO - PUT http://localhost:9200/my_index/_doc/1534289875360530441 [status:201 duration:0.007s]
+[2022-06-07 22:43:24,657] {_transport.py:336} INFO - PUT http://localhost:9200/my_index/_doc/1534289874471223299 [status:201 duration:0.009s]
+[2022-06-07 22:43:24,688] {_transport.py:336} INFO - PUT http://localhost:9200/my_index/_doc/1534289872768405506 [status:201 duration:0.011s]
+[2022-06-07 22:43:24,704] {_transport.py:336} INFO - PUT http://localhost:9200/my_index/_doc/1534289872755863553 [status:201 duration:0.008s]
+[2022-06-07 22:43:24,704] {twitter.py:696} INFO - Retrieving scroll page scroll:thGAVUV0VFVBaCwL2B1KDyyioWhoCz0aSj8soqEnEV4IJ6FYCJehgHREVGQVVMVDUBFQIVAAA=
+[2022-06-07 22:43:24,706] {base.py:171} INFO - Retrieving https://api.twitter.com/2/search/adaptive.json?include_profile_interstitial_type=1&include_blocking=1&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1&include_can_dm=1&include_can_media_tag=1&skip_status=1&cards_platform=Web-12&include_cards=1&include_ext_alt_text=true&include_quote_count=true&include_reply_count=1&tweet_mode=extended&include_entities=true&include_user_entities=true&include_ext_media_color=true&include_ext_media_availability=true&send_error_codes=true&simple_quoted_tweets=true&q=near%3AParis+since%3A1654638017+until%3A1654638197&tweet_search_mode=live&count=100&query_source=spelling_expansion_revert_click&cursor=scroll%3AthGAVUV0VFVBaCwL2B1KDyyioWhoCz0aSj8soqEnEV4IJ6FYCJehgHREVGQVVMVDUBFQIVAAA%3D&pc=1&spelling_corrections=1&ext=mediaStats%2ChighlightedLabel
+[2022-06-07 22:43:25,431] {base.py:189} INFO - Retrieved https://api.twitter.com/2/search/adaptive.json?include_profile_interstitial_type=1&include_blocking=1&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1&include_can_dm=1&include_can_media_tag=1&skip_status=1&cards_platform=Web-12&include_cards=1&include_ext_alt_text=true&include_quote_count=true&include_reply_count=1&tweet_mode=extended&include_entities=true&include_user_entities=true&include_ext_media_color=true&include_ext_media_availability=true&send_error_codes=true&simple_quoted_tweets=true&q=near%3AParis+since%3A1654638017+until%3A1654638197&tweet_search_mode=live&count=100&query_source=spelling_expansion_revert_click&cursor=scroll%3AthGAVUV0VFVBaCwL2B1KDyyioWhoCz0aSj8soqEnEV4IJ6FYCJehgHREVGQVVMVDUBFQIVAAA%3D&pc=1&spelling_corrections=1&ext=mediaStats%2ChighlightedLabel: 200
+[2022-06-07 22:43:25,449] {_transport.py:336} INFO - PUT http://localhost:9200/my_index/_doc/1534289872122437632 [status:201 duration:0.008s]
+[2022-06-07 22:43:25,461] {_transport.py:336} INFO - PUT http://localhost:9200/my_index/_doc/1534289871812145152 [status:201 duration:0.007s]
+[2022-06-07 22:43:25,484] {_transport.py:336} INFO - PUT http://localhost:9200/my_index/_doc/1534289868649639936 [status:201 duration:0.009s]
+[2022-06-07 22:43:25,506] {_transport.py:336} INFO - PUT http://localhost:9200/my_index/_doc/1534289867936518150 [status:201 duration:0.009s]
+[2022-06-07 22:43:25,518] {_transport.py:336} INFO - PUT http://localhost:9200/my_index/_doc/1534289867768733699 [status:201 duration:0.009s]
+[2022-06-07 22:43:25,535] {_transport.py:336} INFO - PUT http://localhost:9200/my_index/_doc/1534289867139588097 [status:201 duration:0.007s]
+[2022-06-07 22:43:25,580] {_transport.py:336} INFO - PUT http://localhost:9200/my_index/_doc/1534289865549946885 [status:201 duration:0.007s]
+[2022-06-07 22:43:25,590] {python.py:173} INFO - Done. Returned value was: None
+[2022-06-07 22:43:25,595] {taskinstance.py:1396} INFO - Marking task as SUCCESS. dag_id=data_pipeline, task_id=tweets_to_es, execution_date=20220607T213900, start_date=20220607T214318, end_date=20220607T214325
+[2022-06-07 22:43:25,618] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-06-07 22:43:25,627] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

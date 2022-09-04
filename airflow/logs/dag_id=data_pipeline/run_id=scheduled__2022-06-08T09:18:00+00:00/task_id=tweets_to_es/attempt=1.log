@@ -1,0 +1,32 @@
+[2022-06-08 10:21:04,224] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: data_pipeline.tweets_to_es scheduled__2022-06-08T09:18:00+00:00 [queued]>
+[2022-06-08 10:21:04,232] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: data_pipeline.tweets_to_es scheduled__2022-06-08T09:18:00+00:00 [queued]>
+[2022-06-08 10:21:04,232] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 10:21:04,232] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-06-08 10:21:04,232] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-08 10:21:04,246] {taskinstance.py:1378} INFO - Executing <Task(PythonOperator): tweets_to_es> on 2022-06-08 09:18:00+00:00
+[2022-06-08 10:21:04,250] {standard_task_runner.py:52} INFO - Started process 4684 to run task
+[2022-06-08 10:21:04,256] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'data_pipeline', 'tweets_to_es', 'scheduled__2022-06-08T09:18:00+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/airfow_es.py', '--cfg-path', '/tmp/tmpm5l8ymlu', '--error-file', '/tmp/tmpqrl5pzc6']
+[2022-06-08 10:21:04,257] {standard_task_runner.py:80} INFO - Job 14: Subtask tweets_to_es
+[2022-06-08 10:21:04,309] {task_command.py:370} INFO - Running <TaskInstance: data_pipeline.tweets_to_es scheduled__2022-06-08T09:18:00+00:00 [running]> on host oury-Tp
+[2022-06-08 10:21:04,377] {taskinstance.py:1570} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=data_pipeline
+AIRFLOW_CTX_TASK_ID=tweets_to_es
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-08T09:18:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-08T09:18:00+00:00
+[2022-06-08 10:21:04,378] {taskinstance.py:1890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/oury/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/oury/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/oury/airflow/dags/airfow_es.py", line 54, in tweet_to_es_func
+    if start_time is None:
+UnboundLocalError: local variable 'start_time' referenced before assignment
+[2022-06-08 10:21:04,381] {taskinstance.py:1396} INFO - Marking task as FAILED. dag_id=data_pipeline, task_id=tweets_to_es, execution_date=20220608T091800, start_date=20220608T092104, end_date=20220608T092104
+[2022-06-08 10:21:04,393] {standard_task_runner.py:92} ERROR - Failed to execute job 14 for task tweets_to_es (local variable 'start_time' referenced before assignment; 4684)
+[2022-06-08 10:21:04,428] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-06-08 10:21:04,444] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

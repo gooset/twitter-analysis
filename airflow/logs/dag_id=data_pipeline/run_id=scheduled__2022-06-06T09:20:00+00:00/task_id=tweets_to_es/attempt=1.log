@@ -1,0 +1,30 @@
+[2022-06-06 10:43:25,187] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: data_pipeline.tweets_to_es scheduled__2022-06-06T09:20:00+00:00 [queued]>
+[2022-06-06 10:43:25,194] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: data_pipeline.tweets_to_es scheduled__2022-06-06T09:20:00+00:00 [queued]>
+[2022-06-06 10:43:25,194] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-06 10:43:25,194] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-06-06 10:43:25,194] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-06 10:43:25,207] {taskinstance.py:1378} INFO - Executing <Task(PythonOperator): tweets_to_es> on 2022-06-06 09:20:00+00:00
+[2022-06-06 10:43:25,210] {standard_task_runner.py:52} INFO - Started process 17212 to run task
+[2022-06-06 10:43:25,213] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'data_pipeline', 'tweets_to_es', 'scheduled__2022-06-06T09:20:00+00:00', '--job-id', '114', '--raw', '--subdir', 'DAGS_FOLDER/airfow_es.py', '--cfg-path', '/tmp/tmp0_27u1yz', '--error-file', '/tmp/tmphqcpe490']
+[2022-06-06 10:43:25,214] {standard_task_runner.py:80} INFO - Job 114: Subtask tweets_to_es
+[2022-06-06 10:43:25,247] {task_command.py:370} INFO - Running <TaskInstance: data_pipeline.tweets_to_es scheduled__2022-06-06T09:20:00+00:00 [running]> on host oury-Tp
+[2022-06-06 10:43:25,291] {taskinstance.py:1570} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=data_pipeline
+AIRFLOW_CTX_TASK_ID=tweets_to_es
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-06T09:20:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-06T09:20:00+00:00
+[2022-06-06 10:43:25,292] {taskinstance.py:1890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/oury/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/oury/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+TypeError: tweet_to_es_func() missing 5 required positional arguments: 'es', 'start', 'end', 'location', and 'languages'
+[2022-06-06 10:43:25,295] {taskinstance.py:1396} INFO - Marking task as FAILED. dag_id=data_pipeline, task_id=tweets_to_es, execution_date=20220606T092000, start_date=20220606T094325, end_date=20220606T094325
+[2022-06-06 10:43:25,304] {standard_task_runner.py:92} ERROR - Failed to execute job 114 for task tweets_to_es (tweet_to_es_func() missing 5 required positional arguments: 'es', 'start', 'end', 'location', and 'languages'; 17212)
+[2022-06-06 10:43:25,344] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-06-06 10:43:25,362] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

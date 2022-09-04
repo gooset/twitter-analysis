@@ -1,0 +1,77 @@
+[2022-06-07 13:25:02,714] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: data_pipeline.tweets_to_es scheduled__2022-06-07T12:20:00+00:00 [queued]>
+[2022-06-07 13:25:02,719] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: data_pipeline.tweets_to_es scheduled__2022-06-07T12:20:00+00:00 [queued]>
+[2022-06-07 13:25:02,719] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 13:25:02,720] {taskinstance.py:1358} INFO - Starting attempt 1 of 1
+[2022-06-07 13:25:02,720] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-07 13:25:02,730] {taskinstance.py:1378} INFO - Executing <Task(PythonOperator): tweets_to_es> on 2022-06-07 12:20:00+00:00
+[2022-06-07 13:25:02,733] {standard_task_runner.py:52} INFO - Started process 27927 to run task
+[2022-06-07 13:25:02,736] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'data_pipeline', 'tweets_to_es', 'scheduled__2022-06-07T12:20:00+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/airfow_es.py', '--cfg-path', '/tmp/tmpai7qm3ne', '--error-file', '/tmp/tmpk8iyh64b']
+[2022-06-07 13:25:02,736] {standard_task_runner.py:80} INFO - Job 22: Subtask tweets_to_es
+[2022-06-07 13:25:02,769] {task_command.py:370} INFO - Running <TaskInstance: data_pipeline.tweets_to_es scheduled__2022-06-07T12:20:00+00:00 [running]> on host oury-Tp
+[2022-06-07 13:25:02,809] {taskinstance.py:1570} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=data_pipeline
+AIRFLOW_CTX_TASK_ID=tweets_to_es
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-07T12:20:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-06-07T12:20:00+00:00
+[2022-06-07 13:25:02,810] {twitter.py:696} INFO - Retrieving scroll page None
+[2022-06-07 13:25:02,810] {twitter.py:626} INFO - Retrieving guest token
+[2022-06-07 13:25:02,811] {base.py:171} INFO - Retrieving https://twitter.com/search?f=live&lang=en&q=near%3ATunis+since%3A1654604402+until%3A1654604702&src=spelling_expansion_revert_click
+[2022-06-07 13:25:03,462] {base.py:189} INFO - Retrieved https://twitter.com/search?f=live&lang=en&q=near%3ATunis+since%3A1654604402+until%3A1654604702&src=spelling_expansion_revert_click: 200
+[2022-06-07 13:25:03,465] {base.py:171} INFO - Retrieving https://api.twitter.com/2/search/adaptive.json?include_profile_interstitial_type=1&include_blocking=1&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1&include_can_dm=1&include_can_media_tag=1&skip_status=1&cards_platform=Web-12&include_cards=1&include_ext_alt_text=true&include_quote_count=true&include_reply_count=1&tweet_mode=extended&include_entities=true&include_user_entities=true&include_ext_media_color=true&include_ext_media_availability=true&send_error_codes=true&simple_quoted_tweets=true&q=near%3ATunis+since%3A1654604402+until%3A1654604702&tweet_search_mode=live&count=100&query_source=spelling_expansion_revert_click&pc=1&spelling_corrections=1&ext=mediaStats%2ChighlightedLabel
+[2022-06-07 13:25:04,199] {base.py:189} INFO - Retrieved https://api.twitter.com/2/search/adaptive.json?include_profile_interstitial_type=1&include_blocking=1&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1&include_can_dm=1&include_can_media_tag=1&skip_status=1&cards_platform=Web-12&include_cards=1&include_ext_alt_text=true&include_quote_count=true&include_reply_count=1&tweet_mode=extended&include_entities=true&include_user_entities=true&include_ext_media_color=true&include_ext_media_availability=true&send_error_codes=true&simple_quoted_tweets=true&q=near%3ATunis+since%3A1654604402+until%3A1654604702&tweet_search_mode=live&count=100&query_source=spelling_expansion_revert_click&pc=1&spelling_corrections=1&ext=mediaStats%2ChighlightedLabel: 200
+[2022-06-07 13:25:04,557] {_transport.py:359} INFO - PUT http://localhost:9200/gummo_index/_doc/1534149340968656896 [status:N/A duration:0.001s]
+[2022-06-07 13:25:04,557] {_node_pool.py:246} WARNING - Node <Urllib3HttpNode(http://localhost:9200)> has failed for 1 times in a row, putting on 1 second timeout
+[2022-06-07 13:25:04,557] {_transport.py:396} WARNING - Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/home/oury/.local/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/oury/.local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7f65d2f42740>: Failed to establish a new connection: [Errno 111] Connection refused)
+[2022-06-07 13:25:04,558] {_transport.py:359} INFO - PUT http://localhost:9200/gummo_index/_doc/1534149340968656896 [status:N/A duration:0.000s]
+[2022-06-07 13:25:04,558] {_node_pool.py:246} WARNING - Node <Urllib3HttpNode(http://localhost:9200)> has failed for 2 times in a row, putting on 2 second timeout
+[2022-06-07 13:25:04,559] {_transport.py:396} WARNING - Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/home/oury/.local/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/oury/.local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7f65d2498790>: Failed to establish a new connection: [Errno 111] Connection refused)
+[2022-06-07 13:25:04,559] {_transport.py:359} INFO - PUT http://localhost:9200/gummo_index/_doc/1534149340968656896 [status:N/A duration:0.000s]
+[2022-06-07 13:25:04,559] {_node_pool.py:246} WARNING - Node <Urllib3HttpNode(http://localhost:9200)> has failed for 3 times in a row, putting on 4 second timeout
+[2022-06-07 13:25:04,559] {_transport.py:396} WARNING - Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/home/oury/.local/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/oury/.local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7f65d24989a0>: Failed to establish a new connection: [Errno 111] Connection refused)
+[2022-06-07 13:25:04,560] {_transport.py:359} INFO - PUT http://localhost:9200/gummo_index/_doc/1534149340968656896 [status:N/A duration:0.000s]
+[2022-06-07 13:25:04,560] {_node_pool.py:246} WARNING - Node <Urllib3HttpNode(http://localhost:9200)> has failed for 4 times in a row, putting on 8 second timeout
+[2022-06-07 13:25:04,562] {taskinstance.py:1890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/oury/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/oury/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/oury/airflow/dags/airfow_es.py", line 67, in tweet_to_es_func
+    es.index(index=tweets_index, id=f'{tweet["id"]}', document=tweet)
+  File "/home/oury/.local/lib/python3.10/site-packages/elasticsearch/_sync/client/utils.py", line 404, in wrapped
+    return api(*args, **kwargs)
+  File "/home/oury/.local/lib/python3.10/site-packages/elasticsearch/_sync/client/__init__.py", line 2217, in index
+    return self.perform_request(  # type: ignore[return-value]
+  File "/home/oury/.local/lib/python3.10/site-packages/elasticsearch/_sync/client/_base.py", line 286, in perform_request
+    meta, resp_body = self.transport.perform_request(
+  File "/home/oury/.local/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/oury/.local/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7f65d2f42740>: Failed to establish a new connection: [Errno 111] Connection refused))
+[2022-06-07 13:25:04,566] {taskinstance.py:1396} INFO - Marking task as FAILED. dag_id=data_pipeline, task_id=tweets_to_es, execution_date=20220607T122000, start_date=20220607T122502, end_date=20220607T122504
+[2022-06-07 13:25:04,575] {standard_task_runner.py:92} ERROR - Failed to execute job 22 for task tweets_to_es (Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7f65d2f42740>: Failed to establish a new connection: [Errno 111] Connection refused)); 27927)
+[2022-06-07 13:25:04,594] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-06-07 13:25:04,609] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

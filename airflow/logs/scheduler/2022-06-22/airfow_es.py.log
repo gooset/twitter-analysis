@@ -1,0 +1,604 @@
+[2022-06-22 11:40:59,293] {processor.py:153} INFO - Started process (PID=11659) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:40:59,294] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:40:59,295] {logging_mixin.py:115} INFO - [2022-06-22 11:40:59,294] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:40:59,304] {logging_mixin.py:115} INFO - [2022-06-22 11:40:59,301] {dagbag.py:320} ERROR - Failed to import: /home/oury/airflow/dags/airfow_es.py
+Traceback (most recent call last):
+  File "/home/oury/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/oury/airflow/dags/airfow_es.py", line 100
+    INSERT OR IGNORE INTO my_table (name, age) VALUES ('Karen', 34)
+           ^^
+SyntaxError: invalid syntax
+[2022-06-22 11:40:59,305] {processor.py:653} WARNING - No viable dags retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:40:59,381] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.094 seconds
+[2022-06-22 11:42:12,231] {processor.py:153} INFO - Started process (PID=11927) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:42:12,235] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:42:12,237] {logging_mixin.py:115} INFO - [2022-06-22 11:42:12,237] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:42:12,250] {logging_mixin.py:115} INFO - [2022-06-22 11:42:12,246] {dagbag.py:320} ERROR - Failed to import: /home/oury/airflow/dags/airfow_es.py
+Traceback (most recent call last):
+  File "/home/oury/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/oury/airflow/dags/airfow_es.py", line 100
+    INSERT OR IGNORE INTO my_table (name, age) VALUES ('Karen', 34)
+           ^^
+SyntaxError: invalid syntax
+[2022-06-22 11:42:12,275] {processor.py:653} WARNING - No viable dags retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:42:12,397] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.194 seconds
+[2022-06-22 11:42:49,537] {processor.py:153} INFO - Started process (PID=12152) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:42:49,539] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:42:49,539] {logging_mixin.py:115} INFO - [2022-06-22 11:42:49,539] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:42:49,557] {logging_mixin.py:115} INFO - [2022-06-22 11:42:49,546] {dagbag.py:320} ERROR - Failed to import: /home/oury/airflow/dags/airfow_es.py
+Traceback (most recent call last):
+  File "/home/oury/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/oury/airflow/dags/airfow_es.py", line 100
+    INSERT OR IGNORE INTO my_table (name, age) VALUES ('Karen', 34)
+           ^^
+SyntaxError: invalid syntax
+[2022-06-22 11:42:49,558] {processor.py:653} WARNING - No viable dags retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:42:49,587] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.054 seconds
+[2022-06-22 11:43:50,750] {processor.py:153} INFO - Started process (PID=12386) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:43:50,758] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:43:50,759] {logging_mixin.py:115} INFO - [2022-06-22 11:43:50,759] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:43:50,763] {logging_mixin.py:115} INFO - [2022-06-22 11:43:50,762] {dagbag.py:320} ERROR - Failed to import: /home/oury/airflow/dags/airfow_es.py
+Traceback (most recent call last):
+  File "/home/oury/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/oury/airflow/dags/airfow_es.py", line 100
+    INSERT OR IGNORE INTO my_table (name, age) VALUES ('Karen', 34)
+           ^^
+SyntaxError: invalid syntax
+[2022-06-22 11:43:50,764] {processor.py:653} WARNING - No viable dags retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:43:50,925] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.178 seconds
+[2022-06-22 11:44:25,507] {processor.py:153} INFO - Started process (PID=12423) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:44:25,508] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:44:25,509] {logging_mixin.py:115} INFO - [2022-06-22 11:44:25,509] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:44:25,512] {logging_mixin.py:115} INFO - [2022-06-22 11:44:25,511] {dagbag.py:320} ERROR - Failed to import: /home/oury/airflow/dags/airfow_es.py
+Traceback (most recent call last):
+  File "/home/oury/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/oury/airflow/dags/airfow_es.py", line 100
+    INSERT OR IGNORE INTO my_table (name, age) VALUES ('Karen', 34)
+           ^^
+SyntaxError: invalid syntax
+[2022-06-22 11:44:25,513] {processor.py:653} WARNING - No viable dags retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:44:25,700] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.197 seconds
+[2022-06-22 11:45:16,536] {processor.py:153} INFO - Started process (PID=12548) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:45:16,537] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:45:16,538] {logging_mixin.py:115} INFO - [2022-06-22 11:45:16,538] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:45:17,103] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:45:17,161] {logging_mixin.py:115} INFO - [2022-06-22 11:45:17,161] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:45:17,168] {logging_mixin.py:115} INFO - [2022-06-22 11:45:17,167] {dag.py:2398} INFO - Creating ORM DAG for data_pipeline
+[2022-06-22 11:45:17,179] {logging_mixin.py:115} INFO - [2022-06-22 11:45:17,179] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:42:00+00:00, run_after=2022-06-22T10:45:00+00:00
+[2022-06-22 11:45:17,198] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.664 seconds
+[2022-06-22 11:46:06,742] {processor.py:153} INFO - Started process (PID=12609) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:46:06,743] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:46:06,743] {logging_mixin.py:115} INFO - [2022-06-22 11:46:06,743] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:46:07,220] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:46:07,234] {logging_mixin.py:115} INFO - [2022-06-22 11:46:07,234] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:46:07,257] {logging_mixin.py:115} INFO - [2022-06-22 11:46:07,257] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:45:00+00:00, run_after=2022-06-22T10:48:00+00:00
+[2022-06-22 11:46:07,271] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.532 seconds
+[2022-06-22 11:46:23,791] {processor.py:153} INFO - Started process (PID=12629) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:46:23,792] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:46:23,792] {logging_mixin.py:115} INFO - [2022-06-22 11:46:23,792] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:46:24,512] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:46:24,522] {logging_mixin.py:115} INFO - [2022-06-22 11:46:24,522] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:46:24,542] {logging_mixin.py:115} INFO - [2022-06-22 11:46:24,541] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:45:00+00:00, run_after=2022-06-22T10:48:00+00:00
+[2022-06-22 11:46:24,560] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.776 seconds
+[2022-06-22 11:46:34,605] {processor.py:153} INFO - Started process (PID=12707) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:46:34,606] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:46:34,607] {logging_mixin.py:115} INFO - [2022-06-22 11:46:34,606] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:46:35,231] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:46:35,241] {logging_mixin.py:115} INFO - [2022-06-22 11:46:35,241] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:46:35,261] {logging_mixin.py:115} INFO - [2022-06-22 11:46:35,261] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:45:00+00:00, run_after=2022-06-22T10:48:00+00:00
+[2022-06-22 11:46:35,372] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.773 seconds
+[2022-06-22 11:46:48,304] {processor.py:153} INFO - Started process (PID=12725) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:46:48,305] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:46:48,306] {logging_mixin.py:115} INFO - [2022-06-22 11:46:48,306] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:46:49,231] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:46:49,242] {logging_mixin.py:115} INFO - [2022-06-22 11:46:49,242] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:46:49,273] {logging_mixin.py:115} INFO - [2022-06-22 11:46:49,273] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:45:00+00:00, run_after=2022-06-22T10:48:00+00:00
+[2022-06-22 11:46:49,288] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.987 seconds
+[2022-06-22 11:47:00,510] {processor.py:153} INFO - Started process (PID=12742) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:47:00,511] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:47:00,514] {logging_mixin.py:115} INFO - [2022-06-22 11:47:00,513] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:47:01,110] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:47:01,119] {logging_mixin.py:115} INFO - [2022-06-22 11:47:01,119] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:47:01,146] {logging_mixin.py:115} INFO - [2022-06-22 11:47:01,146] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:45:00+00:00, run_after=2022-06-22T10:48:00+00:00
+[2022-06-22 11:47:01,160] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.654 seconds
+[2022-06-22 11:47:22,284] {processor.py:153} INFO - Started process (PID=12760) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:47:22,286] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:47:22,289] {logging_mixin.py:115} INFO - [2022-06-22 11:47:22,288] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:47:23,022] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:47:23,033] {logging_mixin.py:115} INFO - [2022-06-22 11:47:23,032] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:47:23,054] {logging_mixin.py:115} INFO - [2022-06-22 11:47:23,054] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:45:00+00:00, run_after=2022-06-22T10:48:00+00:00
+[2022-06-22 11:47:23,070] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.790 seconds
+[2022-06-22 11:47:38,557] {processor.py:153} INFO - Started process (PID=12780) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:47:38,558] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:47:38,558] {logging_mixin.py:115} INFO - [2022-06-22 11:47:38,558] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:47:39,109] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:47:39,123] {logging_mixin.py:115} INFO - [2022-06-22 11:47:39,123] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:47:39,150] {logging_mixin.py:115} INFO - [2022-06-22 11:47:39,149] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:45:00+00:00, run_after=2022-06-22T10:48:00+00:00
+[2022-06-22 11:47:39,178] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.624 seconds
+[2022-06-22 11:47:55,844] {processor.py:153} INFO - Started process (PID=12800) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:47:55,844] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:47:55,845] {logging_mixin.py:115} INFO - [2022-06-22 11:47:55,845] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:47:56,347] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:47:56,357] {logging_mixin.py:115} INFO - [2022-06-22 11:47:56,357] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:47:56,379] {logging_mixin.py:115} INFO - [2022-06-22 11:47:56,379] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:45:00+00:00, run_after=2022-06-22T10:48:00+00:00
+[2022-06-22 11:47:56,392] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.551 seconds
+[2022-06-22 11:48:09,824] {processor.py:153} INFO - Started process (PID=12813) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:48:09,825] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:48:09,827] {logging_mixin.py:115} INFO - [2022-06-22 11:48:09,827] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:48:11,088] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:48:11,100] {logging_mixin.py:115} INFO - [2022-06-22 11:48:11,100] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:48:11,149] {logging_mixin.py:115} INFO - [2022-06-22 11:48:11,149] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:48:00+00:00, run_after=2022-06-22T10:51:00+00:00
+[2022-06-22 11:48:11,174] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 1.356 seconds
+[2022-06-22 11:48:26,648] {processor.py:153} INFO - Started process (PID=12839) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:48:26,648] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:48:26,649] {logging_mixin.py:115} INFO - [2022-06-22 11:48:26,649] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:48:27,421] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:48:27,432] {logging_mixin.py:115} INFO - [2022-06-22 11:48:27,432] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:48:27,456] {logging_mixin.py:115} INFO - [2022-06-22 11:48:27,456] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:48:00+00:00, run_after=2022-06-22T10:51:00+00:00
+[2022-06-22 11:48:27,470] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.825 seconds
+[2022-06-22 11:48:42,769] {processor.py:153} INFO - Started process (PID=12860) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:48:42,769] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:48:42,769] {logging_mixin.py:115} INFO - [2022-06-22 11:48:42,769] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:48:43,675] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:48:43,692] {logging_mixin.py:115} INFO - [2022-06-22 11:48:43,691] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:48:43,766] {logging_mixin.py:115} INFO - [2022-06-22 11:48:43,766] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:48:00+00:00, run_after=2022-06-22T10:51:00+00:00
+[2022-06-22 11:48:43,802] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 1.037 seconds
+[2022-06-22 11:48:54,237] {processor.py:153} INFO - Started process (PID=12874) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:48:54,238] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:48:54,238] {logging_mixin.py:115} INFO - [2022-06-22 11:48:54,238] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:48:54,842] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:48:54,854] {logging_mixin.py:115} INFO - [2022-06-22 11:48:54,854] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:48:54,882] {logging_mixin.py:115} INFO - [2022-06-22 11:48:54,882] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:48:00+00:00, run_after=2022-06-22T10:51:00+00:00
+[2022-06-22 11:48:54,899] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.665 seconds
+[2022-06-22 11:49:05,207] {processor.py:153} INFO - Started process (PID=12901) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:49:05,208] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:49:05,208] {logging_mixin.py:115} INFO - [2022-06-22 11:49:05,208] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:49:05,677] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:49:05,685] {logging_mixin.py:115} INFO - [2022-06-22 11:49:05,685] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:49:05,710] {logging_mixin.py:115} INFO - [2022-06-22 11:49:05,710] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:48:00+00:00, run_after=2022-06-22T10:51:00+00:00
+[2022-06-22 11:49:05,722] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.518 seconds
+[2022-06-22 11:49:15,664] {processor.py:153} INFO - Started process (PID=12914) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:49:15,664] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:49:15,665] {logging_mixin.py:115} INFO - [2022-06-22 11:49:15,664] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:49:16,101] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:49:16,112] {logging_mixin.py:115} INFO - [2022-06-22 11:49:16,112] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:49:16,136] {logging_mixin.py:115} INFO - [2022-06-22 11:49:16,136] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:48:00+00:00, run_after=2022-06-22T10:51:00+00:00
+[2022-06-22 11:49:16,151] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.491 seconds
+[2022-06-22 11:49:25,690] {processor.py:153} INFO - Started process (PID=12925) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:49:25,691] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:49:25,692] {logging_mixin.py:115} INFO - [2022-06-22 11:49:25,691] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:49:26,231] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:49:26,240] {logging_mixin.py:115} INFO - [2022-06-22 11:49:26,240] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:49:26,260] {logging_mixin.py:115} INFO - [2022-06-22 11:49:26,260] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:48:00+00:00, run_after=2022-06-22T10:51:00+00:00
+[2022-06-22 11:49:26,274] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.592 seconds
+[2022-06-22 11:49:34,065] {processor.py:153} INFO - Started process (PID=12935) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:49:34,065] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:49:34,066] {logging_mixin.py:115} INFO - [2022-06-22 11:49:34,066] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:49:34,596] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:49:34,614] {logging_mixin.py:115} INFO - [2022-06-22 11:49:34,614] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:49:34,650] {logging_mixin.py:115} INFO - [2022-06-22 11:49:34,650] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:48:00+00:00, run_after=2022-06-22T10:51:00+00:00
+[2022-06-22 11:49:34,667] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.605 seconds
+[2022-06-22 11:49:44,383] {processor.py:153} INFO - Started process (PID=12951) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:49:44,384] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:49:44,384] {logging_mixin.py:115} INFO - [2022-06-22 11:49:44,384] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:49:45,447] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:49:45,463] {logging_mixin.py:115} INFO - [2022-06-22 11:49:45,463] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:49:45,488] {logging_mixin.py:115} INFO - [2022-06-22 11:49:45,488] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:48:00+00:00, run_after=2022-06-22T10:51:00+00:00
+[2022-06-22 11:49:45,502] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 1.122 seconds
+[2022-06-22 11:49:55,953] {processor.py:153} INFO - Started process (PID=12974) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:49:55,953] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:49:55,954] {logging_mixin.py:115} INFO - [2022-06-22 11:49:55,954] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:49:56,683] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:49:56,692] {logging_mixin.py:115} INFO - [2022-06-22 11:49:56,692] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:49:56,714] {logging_mixin.py:115} INFO - [2022-06-22 11:49:56,714] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:48:00+00:00, run_after=2022-06-22T10:51:00+00:00
+[2022-06-22 11:49:56,727] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.777 seconds
+[2022-06-22 11:50:08,422] {processor.py:153} INFO - Started process (PID=13022) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:50:08,424] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:50:08,431] {logging_mixin.py:115} INFO - [2022-06-22 11:50:08,431] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:50:10,008] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:50:10,039] {logging_mixin.py:115} INFO - [2022-06-22 11:50:10,039] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:50:10,112] {logging_mixin.py:115} INFO - [2022-06-22 11:50:10,112] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:48:00+00:00, run_after=2022-06-22T10:51:00+00:00
+[2022-06-22 11:50:10,163] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 1.791 seconds
+[2022-06-22 11:50:24,252] {processor.py:153} INFO - Started process (PID=13073) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:50:24,253] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:50:24,253] {logging_mixin.py:115} INFO - [2022-06-22 11:50:24,253] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:50:24,971] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:50:24,993] {logging_mixin.py:115} INFO - [2022-06-22 11:50:24,993] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:50:25,040] {logging_mixin.py:115} INFO - [2022-06-22 11:50:25,039] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:48:00+00:00, run_after=2022-06-22T10:51:00+00:00
+[2022-06-22 11:50:25,071] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.823 seconds
+[2022-06-22 11:50:42,342] {processor.py:153} INFO - Started process (PID=13231) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:50:42,342] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:50:42,344] {logging_mixin.py:115} INFO - [2022-06-22 11:50:42,344] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:50:44,942] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:50:44,970] {logging_mixin.py:115} INFO - [2022-06-22 11:50:44,969] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:50:45,028] {logging_mixin.py:115} INFO - [2022-06-22 11:50:45,028] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:48:00+00:00, run_after=2022-06-22T10:51:00+00:00
+[2022-06-22 11:50:45,059] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 2.722 seconds
+[2022-06-22 11:51:42,060] {processor.py:153} INFO - Started process (PID=13429) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:51:42,064] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:51:42,066] {logging_mixin.py:115} INFO - [2022-06-22 11:51:42,065] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:51:44,806] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:51:44,854] {logging_mixin.py:115} INFO - [2022-06-22 11:51:44,854] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:51:44,932] {logging_mixin.py:115} INFO - [2022-06-22 11:51:44,932] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:51:00+00:00, run_after=2022-06-22T10:54:00+00:00
+[2022-06-22 11:51:45,132] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 3.113 seconds
+[2022-06-22 11:52:42,162] {processor.py:153} INFO - Started process (PID=13545) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:52:42,163] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:52:42,163] {logging_mixin.py:115} INFO - [2022-06-22 11:52:42,163] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:52:43,432] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:52:43,485] {logging_mixin.py:115} INFO - [2022-06-22 11:52:43,485] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:52:43,557] {logging_mixin.py:115} INFO - [2022-06-22 11:52:43,556] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:51:00+00:00, run_after=2022-06-22T10:54:00+00:00
+[2022-06-22 11:52:43,741] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 1.582 seconds
+[2022-06-22 11:53:06,530] {processor.py:153} INFO - Started process (PID=13566) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:53:06,531] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:53:06,532] {logging_mixin.py:115} INFO - [2022-06-22 11:53:06,532] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:53:07,191] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:53:07,207] {logging_mixin.py:115} INFO - [2022-06-22 11:53:07,206] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:53:07,253] {logging_mixin.py:115} INFO - [2022-06-22 11:53:07,252] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:51:00+00:00, run_after=2022-06-22T10:54:00+00:00
+[2022-06-22 11:53:07,276] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.750 seconds
+[2022-06-22 11:53:32,261] {processor.py:153} INFO - Started process (PID=13587) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:53:32,262] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:53:32,263] {logging_mixin.py:115} INFO - [2022-06-22 11:53:32,263] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:53:32,814] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:53:32,828] {logging_mixin.py:115} INFO - [2022-06-22 11:53:32,828] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:53:32,851] {logging_mixin.py:115} INFO - [2022-06-22 11:53:32,851] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:51:00+00:00, run_after=2022-06-22T10:54:00+00:00
+[2022-06-22 11:53:32,867] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.609 seconds
+[2022-06-22 11:53:52,775] {processor.py:153} INFO - Started process (PID=13608) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:53:52,775] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:53:52,776] {logging_mixin.py:115} INFO - [2022-06-22 11:53:52,776] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:53:53,268] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:53:53,280] {logging_mixin.py:115} INFO - [2022-06-22 11:53:53,280] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:53:53,300] {logging_mixin.py:115} INFO - [2022-06-22 11:53:53,300] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:51:00+00:00, run_after=2022-06-22T10:54:00+00:00
+[2022-06-22 11:53:53,311] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.538 seconds
+[2022-06-22 11:54:01,941] {processor.py:153} INFO - Started process (PID=13624) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:54:01,941] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:54:01,942] {logging_mixin.py:115} INFO - [2022-06-22 11:54:01,942] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:54:02,433] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:54:02,441] {logging_mixin.py:115} INFO - [2022-06-22 11:54:02,441] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:54:02,461] {logging_mixin.py:115} INFO - [2022-06-22 11:54:02,461] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:51:00+00:00, run_after=2022-06-22T10:54:00+00:00
+[2022-06-22 11:54:02,474] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.536 seconds
+[2022-06-22 11:54:21,833] {processor.py:153} INFO - Started process (PID=13636) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:54:21,840] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:54:21,840] {logging_mixin.py:115} INFO - [2022-06-22 11:54:21,840] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:54:23,044] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:54:23,063] {logging_mixin.py:115} INFO - [2022-06-22 11:54:23,063] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:54:23,128] {logging_mixin.py:115} INFO - [2022-06-22 11:54:23,127] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:54:00+00:00, run_after=2022-06-22T10:57:00+00:00
+[2022-06-22 11:54:23,157] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 1.331 seconds
+[2022-06-22 11:54:43,544] {processor.py:153} INFO - Started process (PID=13658) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:54:43,545] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:54:43,547] {logging_mixin.py:115} INFO - [2022-06-22 11:54:43,546] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:54:44,019] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:54:44,029] {logging_mixin.py:115} INFO - [2022-06-22 11:54:44,028] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:54:44,052] {logging_mixin.py:115} INFO - [2022-06-22 11:54:44,052] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:54:00+00:00, run_after=2022-06-22T10:57:00+00:00
+[2022-06-22 11:54:44,064] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.527 seconds
+[2022-06-22 11:54:54,195] {processor.py:153} INFO - Started process (PID=13793) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:54:54,195] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:54:54,196] {logging_mixin.py:115} INFO - [2022-06-22 11:54:54,196] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:54:54,873] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:54:54,882] {logging_mixin.py:115} INFO - [2022-06-22 11:54:54,881] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:54:54,903] {logging_mixin.py:115} INFO - [2022-06-22 11:54:54,903] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:54:00+00:00, run_after=2022-06-22T10:57:00+00:00
+[2022-06-22 11:54:54,915] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.724 seconds
+[2022-06-22 11:55:03,916] {processor.py:153} INFO - Started process (PID=13808) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:55:03,916] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:55:03,916] {logging_mixin.py:115} INFO - [2022-06-22 11:55:03,916] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:55:04,536] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:55:04,549] {logging_mixin.py:115} INFO - [2022-06-22 11:55:04,549] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:55:04,582] {logging_mixin.py:115} INFO - [2022-06-22 11:55:04,582] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:54:00+00:00, run_after=2022-06-22T10:57:00+00:00
+[2022-06-22 11:55:04,602] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.689 seconds
+[2022-06-22 11:55:14,758] {processor.py:153} INFO - Started process (PID=13818) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:55:14,759] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:55:14,760] {logging_mixin.py:115} INFO - [2022-06-22 11:55:14,760] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:55:15,317] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:55:15,329] {logging_mixin.py:115} INFO - [2022-06-22 11:55:15,329] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:55:15,360] {logging_mixin.py:115} INFO - [2022-06-22 11:55:15,360] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:54:00+00:00, run_after=2022-06-22T10:57:00+00:00
+[2022-06-22 11:55:15,378] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.622 seconds
+[2022-06-22 11:55:25,928] {processor.py:153} INFO - Started process (PID=13829) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:55:25,929] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:55:25,929] {logging_mixin.py:115} INFO - [2022-06-22 11:55:25,929] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:55:26,377] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:55:26,390] {logging_mixin.py:115} INFO - [2022-06-22 11:55:26,390] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:55:26,408] {logging_mixin.py:115} INFO - [2022-06-22 11:55:26,408] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:54:00+00:00, run_after=2022-06-22T10:57:00+00:00
+[2022-06-22 11:55:26,421] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.495 seconds
+[2022-06-22 11:55:35,611] {processor.py:153} INFO - Started process (PID=13838) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:55:35,612] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:55:35,612] {logging_mixin.py:115} INFO - [2022-06-22 11:55:35,612] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:55:36,204] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:55:36,213] {logging_mixin.py:115} INFO - [2022-06-22 11:55:36,213] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:55:36,239] {logging_mixin.py:115} INFO - [2022-06-22 11:55:36,239] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:54:00+00:00, run_after=2022-06-22T10:57:00+00:00
+[2022-06-22 11:55:36,252] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.645 seconds
+[2022-06-22 11:55:46,062] {processor.py:153} INFO - Started process (PID=13849) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:55:46,063] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:55:46,063] {logging_mixin.py:115} INFO - [2022-06-22 11:55:46,063] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:55:46,694] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:55:46,703] {logging_mixin.py:115} INFO - [2022-06-22 11:55:46,703] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:55:46,724] {logging_mixin.py:115} INFO - [2022-06-22 11:55:46,723] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:54:00+00:00, run_after=2022-06-22T10:57:00+00:00
+[2022-06-22 11:55:46,735] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.677 seconds
+[2022-06-22 11:55:55,858] {processor.py:153} INFO - Started process (PID=13858) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:55:55,858] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:55:55,858] {logging_mixin.py:115} INFO - [2022-06-22 11:55:55,858] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:55:56,367] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:55:56,386] {logging_mixin.py:115} INFO - [2022-06-22 11:55:56,386] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:55:56,414] {logging_mixin.py:115} INFO - [2022-06-22 11:55:56,413] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:54:00+00:00, run_after=2022-06-22T10:57:00+00:00
+[2022-06-22 11:55:56,426] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.571 seconds
+[2022-06-22 11:56:06,379] {processor.py:153} INFO - Started process (PID=13868) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:56:06,380] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:56:06,380] {logging_mixin.py:115} INFO - [2022-06-22 11:56:06,380] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:56:06,842] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:56:06,850] {logging_mixin.py:115} INFO - [2022-06-22 11:56:06,850] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:56:06,874] {logging_mixin.py:115} INFO - [2022-06-22 11:56:06,874] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:54:00+00:00, run_after=2022-06-22T10:57:00+00:00
+[2022-06-22 11:56:06,887] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.510 seconds
+[2022-06-22 11:56:16,755] {processor.py:153} INFO - Started process (PID=13878) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:56:16,758] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:56:16,762] {logging_mixin.py:115} INFO - [2022-06-22 11:56:16,762] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:56:17,701] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:56:17,716] {logging_mixin.py:115} INFO - [2022-06-22 11:56:17,715] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:56:17,752] {logging_mixin.py:115} INFO - [2022-06-22 11:56:17,752] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:54:00+00:00, run_after=2022-06-22T10:57:00+00:00
+[2022-06-22 11:56:17,776] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 1.027 seconds
+[2022-06-22 11:56:29,520] {processor.py:153} INFO - Started process (PID=13937) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:56:29,521] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:56:29,522] {logging_mixin.py:115} INFO - [2022-06-22 11:56:29,522] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:56:31,055] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:56:31,074] {logging_mixin.py:115} INFO - [2022-06-22 11:56:31,074] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:56:31,116] {logging_mixin.py:115} INFO - [2022-06-22 11:56:31,116] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:54:00+00:00, run_after=2022-06-22T10:57:00+00:00
+[2022-06-22 11:56:31,144] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 1.632 seconds
+[2022-06-22 11:56:45,748] {processor.py:153} INFO - Started process (PID=13965) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:56:45,749] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:56:45,753] {logging_mixin.py:115} INFO - [2022-06-22 11:56:45,752] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:56:46,729] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:56:46,749] {logging_mixin.py:115} INFO - [2022-06-22 11:56:46,748] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:56:46,808] {logging_mixin.py:115} INFO - [2022-06-22 11:56:46,808] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:54:00+00:00, run_after=2022-06-22T10:57:00+00:00
+[2022-06-22 11:56:46,831] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 1.090 seconds
+[2022-06-22 11:57:13,991] {processor.py:153} INFO - Started process (PID=13988) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:57:13,992] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:57:13,993] {logging_mixin.py:115} INFO - [2022-06-22 11:57:13,992] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:57:15,382] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:57:15,397] {logging_mixin.py:115} INFO - [2022-06-22 11:57:15,396] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:57:15,432] {logging_mixin.py:115} INFO - [2022-06-22 11:57:15,432] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:57:00+00:00, run_after=2022-06-22T11:00:00+00:00
+[2022-06-22 11:57:15,454] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 1.470 seconds
+[2022-06-22 11:57:37,395] {processor.py:153} INFO - Started process (PID=14009) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:57:37,395] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:57:37,396] {logging_mixin.py:115} INFO - [2022-06-22 11:57:37,396] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:57:38,118] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:57:38,130] {logging_mixin.py:115} INFO - [2022-06-22 11:57:38,130] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:57:38,160] {logging_mixin.py:115} INFO - [2022-06-22 11:57:38,160] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:57:00+00:00, run_after=2022-06-22T11:00:00+00:00
+[2022-06-22 11:57:38,177] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.785 seconds
+[2022-06-22 11:57:55,908] {processor.py:153} INFO - Started process (PID=14027) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:57:55,911] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:57:55,912] {logging_mixin.py:115} INFO - [2022-06-22 11:57:55,911] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:57:56,735] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:57:56,749] {logging_mixin.py:115} INFO - [2022-06-22 11:57:56,748] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:57:56,783] {logging_mixin.py:115} INFO - [2022-06-22 11:57:56,782] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:57:00+00:00, run_after=2022-06-22T11:00:00+00:00
+[2022-06-22 11:57:56,809] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.907 seconds
+[2022-06-22 11:58:07,308] {processor.py:153} INFO - Started process (PID=14037) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:58:07,309] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:58:07,310] {logging_mixin.py:115} INFO - [2022-06-22 11:58:07,310] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:58:08,147] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:58:08,168] {logging_mixin.py:115} INFO - [2022-06-22 11:58:08,168] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:58:08,204] {logging_mixin.py:115} INFO - [2022-06-22 11:58:08,204] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:57:00+00:00, run_after=2022-06-22T11:00:00+00:00
+[2022-06-22 11:58:08,230] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.936 seconds
+[2022-06-22 11:58:19,693] {processor.py:153} INFO - Started process (PID=14048) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:58:19,694] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:58:19,694] {logging_mixin.py:115} INFO - [2022-06-22 11:58:19,694] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:58:20,337] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:58:20,349] {logging_mixin.py:115} INFO - [2022-06-22 11:58:20,348] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:58:20,378] {logging_mixin.py:115} INFO - [2022-06-22 11:58:20,378] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:57:00+00:00, run_after=2022-06-22T11:00:00+00:00
+[2022-06-22 11:58:20,394] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.704 seconds
+[2022-06-22 11:58:32,706] {processor.py:153} INFO - Started process (PID=14059) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:58:32,706] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:58:32,707] {logging_mixin.py:115} INFO - [2022-06-22 11:58:32,707] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:58:33,574] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:58:33,595] {logging_mixin.py:115} INFO - [2022-06-22 11:58:33,594] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:58:33,634] {logging_mixin.py:115} INFO - [2022-06-22 11:58:33,634] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:57:00+00:00, run_after=2022-06-22T11:00:00+00:00
+[2022-06-22 11:58:33,673] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.970 seconds
+[2022-06-22 11:58:44,870] {processor.py:153} INFO - Started process (PID=14073) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:58:44,871] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:58:44,871] {logging_mixin.py:115} INFO - [2022-06-22 11:58:44,871] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:58:45,481] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:58:45,491] {logging_mixin.py:115} INFO - [2022-06-22 11:58:45,491] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:58:45,523] {logging_mixin.py:115} INFO - [2022-06-22 11:58:45,523] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:57:00+00:00, run_after=2022-06-22T11:00:00+00:00
+[2022-06-22 11:58:45,550] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.684 seconds
+[2022-06-22 11:58:57,276] {processor.py:153} INFO - Started process (PID=14084) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:58:57,277] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:58:57,278] {logging_mixin.py:115} INFO - [2022-06-22 11:58:57,278] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:58:58,091] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:58:58,160] {logging_mixin.py:115} INFO - [2022-06-22 11:58:58,156] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:58:58,244] {logging_mixin.py:115} INFO - [2022-06-22 11:58:58,244] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:57:00+00:00, run_after=2022-06-22T11:00:00+00:00
+[2022-06-22 11:58:58,288] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 1.022 seconds
+[2022-06-22 11:59:11,280] {processor.py:153} INFO - Started process (PID=14099) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:59:11,280] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:59:11,281] {logging_mixin.py:115} INFO - [2022-06-22 11:59:11,281] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:59:11,966] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:59:11,991] {logging_mixin.py:115} INFO - [2022-06-22 11:59:11,990] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:59:12,021] {logging_mixin.py:115} INFO - [2022-06-22 11:59:12,021] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:57:00+00:00, run_after=2022-06-22T11:00:00+00:00
+[2022-06-22 11:59:12,039] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.762 seconds
+[2022-06-22 11:59:23,717] {processor.py:153} INFO - Started process (PID=14111) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:59:23,725] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:59:23,729] {logging_mixin.py:115} INFO - [2022-06-22 11:59:23,728] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:59:24,641] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:59:24,660] {logging_mixin.py:115} INFO - [2022-06-22 11:59:24,660] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:59:24,698] {logging_mixin.py:115} INFO - [2022-06-22 11:59:24,698] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:57:00+00:00, run_after=2022-06-22T11:00:00+00:00
+[2022-06-22 11:59:24,717] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 1.014 seconds
+[2022-06-22 11:59:36,796] {processor.py:153} INFO - Started process (PID=14122) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:59:36,796] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:59:36,797] {logging_mixin.py:115} INFO - [2022-06-22 11:59:36,797] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:59:37,343] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:59:37,367] {logging_mixin.py:115} INFO - [2022-06-22 11:59:37,367] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:59:37,392] {logging_mixin.py:115} INFO - [2022-06-22 11:59:37,392] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:57:00+00:00, run_after=2022-06-22T11:00:00+00:00
+[2022-06-22 11:59:37,404] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.613 seconds
+[2022-06-22 11:59:49,051] {processor.py:153} INFO - Started process (PID=14139) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:59:49,052] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 11:59:49,053] {logging_mixin.py:115} INFO - [2022-06-22 11:59:49,052] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:59:49,917] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 11:59:49,933] {logging_mixin.py:115} INFO - [2022-06-22 11:59:49,933] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 11:59:49,967] {logging_mixin.py:115} INFO - [2022-06-22 11:59:49,967] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T10:57:00+00:00, run_after=2022-06-22T11:00:00+00:00
+[2022-06-22 11:59:49,987] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.939 seconds
+[2022-06-22 12:00:11,531] {processor.py:153} INFO - Started process (PID=14152) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:00:11,533] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 12:00:11,533] {logging_mixin.py:115} INFO - [2022-06-22 12:00:11,533] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:00:12,240] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:00:12,257] {logging_mixin.py:115} INFO - [2022-06-22 12:00:12,257] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 12:00:12,305] {logging_mixin.py:115} INFO - [2022-06-22 12:00:12,305] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T11:00:00+00:00, run_after=2022-06-22T11:03:00+00:00
+[2022-06-22 12:00:12,327] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.800 seconds
+[2022-06-22 12:00:31,728] {processor.py:153} INFO - Started process (PID=14170) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:00:31,729] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 12:00:31,730] {logging_mixin.py:115} INFO - [2022-06-22 12:00:31,729] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:00:32,434] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:00:32,444] {logging_mixin.py:115} INFO - [2022-06-22 12:00:32,444] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 12:00:32,479] {logging_mixin.py:115} INFO - [2022-06-22 12:00:32,479] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T11:00:00+00:00, run_after=2022-06-22T11:03:00+00:00
+[2022-06-22 12:00:32,496] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.771 seconds
+[2022-06-22 12:00:50,678] {processor.py:153} INFO - Started process (PID=14188) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:00:50,679] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 12:00:50,679] {logging_mixin.py:115} INFO - [2022-06-22 12:00:50,679] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:00:51,392] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:00:51,410] {logging_mixin.py:115} INFO - [2022-06-22 12:00:51,410] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 12:00:51,446] {logging_mixin.py:115} INFO - [2022-06-22 12:00:51,446] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T11:00:00+00:00, run_after=2022-06-22T11:03:00+00:00
+[2022-06-22 12:00:51,460] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.784 seconds
+[2022-06-22 12:00:58,779] {processor.py:153} INFO - Started process (PID=14196) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:00:58,780] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 12:00:58,780] {logging_mixin.py:115} INFO - [2022-06-22 12:00:58,780] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:00:59,428] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:00:59,442] {logging_mixin.py:115} INFO - [2022-06-22 12:00:59,442] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 12:00:59,497] {logging_mixin.py:115} INFO - [2022-06-22 12:00:59,496] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T11:00:00+00:00, run_after=2022-06-22T11:03:00+00:00
+[2022-06-22 12:00:59,525] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.751 seconds
+[2022-06-22 12:01:09,695] {processor.py:153} INFO - Started process (PID=14205) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:01:09,698] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 12:01:09,699] {logging_mixin.py:115} INFO - [2022-06-22 12:01:09,699] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:01:10,336] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:01:10,356] {logging_mixin.py:115} INFO - [2022-06-22 12:01:10,356] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 12:01:10,406] {logging_mixin.py:115} INFO - [2022-06-22 12:01:10,405] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T11:00:00+00:00, run_after=2022-06-22T11:03:00+00:00
+[2022-06-22 12:01:10,419] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.729 seconds
+[2022-06-22 12:01:20,627] {processor.py:153} INFO - Started process (PID=14214) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:01:20,628] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 12:01:20,629] {logging_mixin.py:115} INFO - [2022-06-22 12:01:20,628] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:01:21,340] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:01:21,363] {logging_mixin.py:115} INFO - [2022-06-22 12:01:21,363] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 12:01:21,410] {logging_mixin.py:115} INFO - [2022-06-22 12:01:21,410] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T11:00:00+00:00, run_after=2022-06-22T11:03:00+00:00
+[2022-06-22 12:01:21,441] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.817 seconds
+[2022-06-22 12:01:33,919] {processor.py:153} INFO - Started process (PID=14226) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:01:33,920] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 12:01:33,920] {logging_mixin.py:115} INFO - [2022-06-22 12:01:33,920] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:01:34,623] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:01:34,636] {logging_mixin.py:115} INFO - [2022-06-22 12:01:34,636] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 12:01:34,673] {logging_mixin.py:115} INFO - [2022-06-22 12:01:34,673] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T11:00:00+00:00, run_after=2022-06-22T11:03:00+00:00
+[2022-06-22 12:01:34,697] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.784 seconds
+[2022-06-22 12:01:47,266] {processor.py:153} INFO - Started process (PID=14237) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:01:47,266] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 12:01:47,268] {logging_mixin.py:115} INFO - [2022-06-22 12:01:47,268] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:01:48,076] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:01:48,092] {logging_mixin.py:115} INFO - [2022-06-22 12:01:48,092] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 12:01:48,126] {logging_mixin.py:115} INFO - [2022-06-22 12:01:48,126] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T11:00:00+00:00, run_after=2022-06-22T11:03:00+00:00
+[2022-06-22 12:01:48,143] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.880 seconds
+[2022-06-22 12:02:00,870] {processor.py:153} INFO - Started process (PID=14251) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:02:00,870] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 12:02:00,871] {logging_mixin.py:115} INFO - [2022-06-22 12:02:00,871] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:02:01,651] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:02:01,664] {logging_mixin.py:115} INFO - [2022-06-22 12:02:01,664] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 12:02:01,694] {logging_mixin.py:115} INFO - [2022-06-22 12:02:01,694] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T11:00:00+00:00, run_after=2022-06-22T11:03:00+00:00
+[2022-06-22 12:02:01,709] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.843 seconds
+[2022-06-22 12:02:13,783] {processor.py:153} INFO - Started process (PID=14263) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:02:13,784] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 12:02:13,785] {logging_mixin.py:115} INFO - [2022-06-22 12:02:13,785] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:02:14,542] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:02:14,558] {logging_mixin.py:115} INFO - [2022-06-22 12:02:14,558] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 12:02:14,593] {logging_mixin.py:115} INFO - [2022-06-22 12:02:14,592] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T11:00:00+00:00, run_after=2022-06-22T11:03:00+00:00
+[2022-06-22 12:02:14,623] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.847 seconds
+[2022-06-22 12:02:26,994] {processor.py:153} INFO - Started process (PID=14274) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:02:26,994] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 12:02:26,995] {logging_mixin.py:115} INFO - [2022-06-22 12:02:26,995] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:02:27,916] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:02:27,935] {logging_mixin.py:115} INFO - [2022-06-22 12:02:27,935] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 12:02:27,965] {logging_mixin.py:115} INFO - [2022-06-22 12:02:27,965] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T11:00:00+00:00, run_after=2022-06-22T11:03:00+00:00
+[2022-06-22 12:02:27,979] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.991 seconds
+[2022-06-22 12:02:41,638] {processor.py:153} INFO - Started process (PID=14286) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:02:41,639] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 12:02:41,640] {logging_mixin.py:115} INFO - [2022-06-22 12:02:41,640] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:02:42,392] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:02:42,405] {logging_mixin.py:115} INFO - [2022-06-22 12:02:42,404] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 12:02:42,433] {logging_mixin.py:115} INFO - [2022-06-22 12:02:42,433] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T11:00:00+00:00, run_after=2022-06-22T11:03:00+00:00
+[2022-06-22 12:02:42,445] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.813 seconds
+[2022-06-22 12:02:55,928] {processor.py:153} INFO - Started process (PID=14299) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:02:55,928] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 12:02:55,929] {logging_mixin.py:115} INFO - [2022-06-22 12:02:55,929] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:02:56,612] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:02:56,629] {logging_mixin.py:115} INFO - [2022-06-22 12:02:56,629] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 12:02:56,676] {logging_mixin.py:115} INFO - [2022-06-22 12:02:56,676] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T11:00:00+00:00, run_after=2022-06-22T11:03:00+00:00
+[2022-06-22 12:02:56,697] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.774 seconds
+[2022-06-22 12:03:19,425] {processor.py:153} INFO - Started process (PID=14313) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:03:19,426] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 12:03:19,427] {logging_mixin.py:115} INFO - [2022-06-22 12:03:19,427] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:03:20,145] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:03:20,161] {logging_mixin.py:115} INFO - [2022-06-22 12:03:20,160] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 12:03:20,204] {logging_mixin.py:115} INFO - [2022-06-22 12:03:20,204] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T11:03:00+00:00, run_after=2022-06-22T11:06:00+00:00
+[2022-06-22 12:03:20,226] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.805 seconds
+[2022-06-22 12:03:38,922] {processor.py:153} INFO - Started process (PID=14331) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:03:38,923] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 12:03:38,923] {logging_mixin.py:115} INFO - [2022-06-22 12:03:38,923] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:03:39,677] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:03:39,690] {logging_mixin.py:115} INFO - [2022-06-22 12:03:39,690] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 12:03:39,737] {logging_mixin.py:115} INFO - [2022-06-22 12:03:39,737] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T11:03:00+00:00, run_after=2022-06-22T11:06:00+00:00
+[2022-06-22 12:03:39,760] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.840 seconds
+[2022-06-22 12:03:52,734] {processor.py:153} INFO - Started process (PID=14343) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:03:52,734] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 12:03:52,735] {logging_mixin.py:115} INFO - [2022-06-22 12:03:52,735] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:03:53,472] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:03:53,488] {logging_mixin.py:115} INFO - [2022-06-22 12:03:53,487] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 12:03:53,512] {logging_mixin.py:115} INFO - [2022-06-22 12:03:53,511] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T11:03:00+00:00, run_after=2022-06-22T11:06:00+00:00
+[2022-06-22 12:03:53,526] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.796 seconds
+[2022-06-22 12:04:00,800] {processor.py:153} INFO - Started process (PID=14352) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:04:00,801] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 12:04:00,801] {logging_mixin.py:115} INFO - [2022-06-22 12:04:00,801] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:04:01,476] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:04:01,491] {logging_mixin.py:115} INFO - [2022-06-22 12:04:01,491] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 12:04:01,527] {logging_mixin.py:115} INFO - [2022-06-22 12:04:01,527] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T11:03:00+00:00, run_after=2022-06-22T11:06:00+00:00
+[2022-06-22 12:04:01,565] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.768 seconds
+[2022-06-22 12:04:12,954] {processor.py:153} INFO - Started process (PID=14362) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:04:12,955] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 12:04:12,957] {logging_mixin.py:115} INFO - [2022-06-22 12:04:12,957] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:04:13,662] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:04:13,676] {logging_mixin.py:115} INFO - [2022-06-22 12:04:13,676] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 12:04:13,703] {logging_mixin.py:115} INFO - [2022-06-22 12:04:13,703] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T11:03:00+00:00, run_after=2022-06-22T11:06:00+00:00
+[2022-06-22 12:04:13,718] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.770 seconds
+[2022-06-22 12:04:24,457] {processor.py:153} INFO - Started process (PID=14374) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:04:24,458] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 12:04:24,460] {logging_mixin.py:115} INFO - [2022-06-22 12:04:24,460] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:04:25,310] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:04:25,325] {logging_mixin.py:115} INFO - [2022-06-22 12:04:25,324] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 12:04:25,387] {logging_mixin.py:115} INFO - [2022-06-22 12:04:25,387] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T11:03:00+00:00, run_after=2022-06-22T11:06:00+00:00
+[2022-06-22 12:04:25,411] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.957 seconds
+[2022-06-22 12:04:39,612] {processor.py:153} INFO - Started process (PID=14386) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:04:39,613] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 12:04:39,613] {logging_mixin.py:115} INFO - [2022-06-22 12:04:39,613] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:04:40,228] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:04:40,240] {logging_mixin.py:115} INFO - [2022-06-22 12:04:40,240] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 12:04:40,269] {logging_mixin.py:115} INFO - [2022-06-22 12:04:40,269] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T11:03:00+00:00, run_after=2022-06-22T11:06:00+00:00
+[2022-06-22 12:04:40,481] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.871 seconds
+[2022-06-22 12:04:56,398] {processor.py:153} INFO - Started process (PID=14403) to work on /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:04:56,408] {processor.py:641} INFO - Processing file /home/oury/airflow/dags/airfow_es.py for tasks to queue
+[2022-06-22 12:04:56,409] {logging_mixin.py:115} INFO - [2022-06-22 12:04:56,408] {dagbag.py:507} INFO - Filling up the DagBag from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:04:57,122] {processor.py:651} INFO - DAG(s) dict_keys(['data_pipeline']) retrieved from /home/oury/airflow/dags/airfow_es.py
+[2022-06-22 12:04:57,131] {logging_mixin.py:115} INFO - [2022-06-22 12:04:57,131] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-22 12:04:57,155] {logging_mixin.py:115} INFO - [2022-06-22 12:04:57,154] {dag.py:2923} INFO - Setting next_dagrun for data_pipeline to 2022-06-22T11:03:00+00:00, run_after=2022-06-22T11:06:00+00:00
+[2022-06-22 12:04:57,327] {processor.py:161} INFO - Processing /home/oury/airflow/dags/airfow_es.py took 0.934 seconds
