@@ -1,0 +1,45 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8000:8000"
+    depends_on:
+      - elasticsearch
+      - postgres
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.15.0
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: your_db_name
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "5432:5432"
+
+  airflow:
+    build:
+      context: ./airflow
+    ports:
+      - "8080:8080"
+      - "5555:5555"
+    depends_on:
+      - backend
+      - elasticsearch
+      - postgres
+
+  front-end:
+    build:
+      context: ./front-end
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+

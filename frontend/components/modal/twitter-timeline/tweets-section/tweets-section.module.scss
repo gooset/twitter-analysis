@@ -1,0 +1,46 @@
+@import '../../../../styles/abstracts/all';
+
+.tweetsSection {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: $main-color;
+  padding: 4rem;
+  border-radius: 2rem;
+  
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: auto;
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  & .title {
+    color: #fff;
+    font-size: 2.4rem;
+    font-weight: 500;
+    
+    @media (max-width: 768px) {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .tweetsSection {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 428px) {
+  .tweetsSection {
+    padding: 1rem;
+    
+    & .title {
+      font-size: 1.5rem;
+      margin-left: 1rem;
+    }
+  }
+}
+

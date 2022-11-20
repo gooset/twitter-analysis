@@ -1,73 +1,74 @@
-# Twitter Analysis App
+# Twitter Analysis Application
 
-The Twitter Analysis App is a web application that allows users to search for tweets based on keywords or user profiles. It provides a simple and intuitive interface for users to discover and analyze tweets of interest. The application consists of a backend API built with FastAPI and a frontend implemented using React.
+## Overview
 
-## Application Structure
+The Twitter Analysis Application is a comprehensive tool for scraping Twitter user data, performing personality analysis using a PyTorch model, and storing the results in Elasticsearch and PostgreSQL databases. The application is containerized using Docker and orchestrated using Docker Compose. It includes three main components: backend, Apache Airflow for workflow management, and a front-end for user interaction.
 
-The application consists of the following components:
+## Project Structure
 
-- `airflow/dags`: Contains the Apache Airflow DAG file (`airfow_es.py`) for scheduling and executing data scraping tasks.
-- `backend`: Contains the backend API implementation.
-  - `app`: Contains the FastAPI application code.
-    - `api.py`: Defines the API routes and their corresponding handlers.
-    - `__init__.py`: Initializes the FastAPI application.
-    - `pg_logic`: Contains the PostgreSQL database logic.
-      - `database.py`: Handles database connections and queries.
-      - `models.py`: Defines the database models.
-  - `main.py`: Entry point for the backend server.
-- `front-end`: Contains the frontend code implemented using React.
-  - `assets`: Contains the application assets, such as icons and logos.
-  - `components`: Contains reusable React components.
-  - `containers`: Contains the main containers for different sections of the application.
-  - `pages`: Contains the Next.js pages for routing.
-  - `store`: Contains Redux store configuration and slice files for managing application state.
-  - `styles`: Contains the Sass stylesheets.
-  - `utils`: Contains utility functions used in the application.
-- `README.md`: This file.
-- `requirements.txt`: Contains the Python dependencies required to run the application.
+The project is organized into three main folders:
 
-## Technologies Used
+1. **backend**: Handles Twitter data scraping, PyTorch model inference, and database interactions.
 
-- Backend: FastAPI, Python, Apache Airflow
-- Data Processing: Pandas, NumPy, PyTorch
-- Web Scraping: SnsCrape
-- Frontend: React, Redux, Axios, Sass, Next.js, Webpack
+2. **airflow**: Manages the workflow using Apache Airflow. Includes DAGs for orchestrating the data pipeline.
 
-## Installation and Setup
+3. **front-end**: Provides a user-friendly interface for interacting with the application. Built with React and Next.js.
 
-1. Clone the repository: `git clone https://github.com/gooset/twitter-analysis.git`
-2. Navigate to the project directory: `cd twitter-analysis`
+## Setup
 
-### Backend Setup
+### Prerequisites
 
-3. Set up and activate a virtual environment: (optional but recommended)
-   - Create a virtual environment: `python -m venv venv`
-   - Activate the virtual environment:
-     - For Windows: `venv\Scripts\activate`
-     - For macOS/Linux: `source venv/bin/activate`
-4. Install the backend dependencies: `pip install -r requirements.txt`
-5. Start the backend server: `uvicorn backend.main:app --reload`
+- Docker
+- Docker Compose
 
-### Frontend Setup
+### Instructions
 
-6. Navigate to the frontend directory: `cd front-end`
-7. Install the frontend dependencies: `npm install`
-8. Start the frontend development server: `npm run dev`
+1. **Clone the repository:**
 
-9. Open your browser and visit: `http://localhost:3000`
+    ```bash
+    git clone https://github.com/your-username/twitter-analysis.git
+    cd twitter-analysis
+    ```
 
-## Usage
+2. **Build and run the Docker containers:**
 
-1. On the home page, enter a keyword or a Twitter username in the respective search bar.
-2. Click the "Search" button or press Enter to retrieve the relevant tweets.
-3. Explore the search results, view individual tweets, and view traits analysis.
-4. Navigate through the different sections of the app to analyze and visualize the tweets.
+    ```bash
+    docker-compose build
+    docker-compose up
+    ```
+
+## Components
+
+### 1. Backend
+
+The backend component is responsible for:
+- Interact with the elasticsearch engine
+- Performing personality analysis using a PyTorch model.
+- Storing data in Elasticsearch and PostgreSQL databases.
+
+### 2. Apache Airflow
+
+Apache Airflow is used for orchestrating the workflow. DAGs (Directed Acyclic Graphs) define the sequence of tasks to execute.
+
+### 3. Front-end
+
+The front-end component provides a web-based interface for users to interact with the application. It is built using React and Next.js.
+
+## Configuration
+
+Adjust the configuration settings in each component's respective Dockerfile and configuration files as needed. Make sure to set environment variables for sensitive information.
+
+## Dependencies
+
+The project relies on the following technologies:
+
+- FastAPI for the backend API.
+- PyTorch for personality analysis.
+- Elasticsearch for data storage.
+- PostgreSQL for relational database storage.
+- Apache Airflow for workflow management.
+- React and Next.js for the front-end.
 
 ## Contributing
 
-Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
+Feel free to contribute to this project by submitting bug reports, feature requests, or pull requests.

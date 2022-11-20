@@ -46,13 +46,6 @@ def get_most_recent_dag_run(dag_id):
     return dag_runs[0] if dag_runs else None
 
 
-# Get the most recent DAG run to determine the scraping time window
-dag_run = get_most_recent_dag_run('data_pipeline')
-if dag_run:
-    start_time = int(dag_run.data_interval_start.timestamp())
-    end_time = int(dag_run.data_interval_end.timestamp())
-
-
 def tweet_to_es_func():
     """
     Perform scraping with SNSCrape and store the tweets in Elasticsearch.
@@ -85,6 +78,13 @@ def tweet_to_es_func():
             }
             es.index(index=tweets_index, id=f'{tweet_data["id"]}', document=tweet_data)  # Store the tweet in Elasticsearch
             ids.append(tweet_data['user_id'])
+
+
+# Get the most recent DAG run to determine the scraping time window
+dag_run = get_most_recent_dag_run('data_pipeline')
+if dag_run:
+    start_time = int(dag_run.data_interval_start.timestamp())
+    end_time = int(dag_run.data_interval_end.timestamp())
 
 
 # Define a PythonOperator to execute the scraping function
